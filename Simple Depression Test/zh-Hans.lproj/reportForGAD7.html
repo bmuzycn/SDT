@@ -1,0 +1,501 @@
+<html>
+    
+    <head>
+        <meta http-equiv=Content-Type content="text/html; charset=unicode">
+            <meta name=Generator content="Microsoft Word 15 (filtered)">
+                <!--<meta name="viewport" content="width=device-width, initial-scale=0.8">-->
+                
+                <title>GAD-7</title>
+                <style>
+                    <!--
+                    /* Font Definitions */
+                    @font-face
+                    {font-family:SimSun;
+                        panose-1:2 1 6 0 3 1 1 1 1 1;}
+                @font-face
+                {font-family:"Cambria Math";
+                    panose-1:2 4 5 3 5 4 6 3 2 4;}
+                @font-face
+                {font-family:Calibri;
+                    panose-1:2 15 5 2 2 2 4 3 2 4;}
+                @font-face
+                {font-family:"\@SimSun";
+                    panose-1:2 1 6 0 3 1 1 1 1 1;}
+                /* Style Definitions */
+                p.MsoNormal, li.MsoNormal, div.MsoNormal
+                {margin:0in;
+                    margin-bottom:.0001pt;
+                    font-size:12.0pt;
+                    font-family:"Times New Roman",serif;}
+                p.MsoHeader, li.MsoHeader, div.MsoHeader
+                {mso-style-link:"Header Char";
+                    margin:0in;
+                    margin-bottom:.0001pt;
+                    font-size:12.0pt;
+                    font-family:"Times New Roman",serif;}
+                p.MsoFooter, li.MsoFooter, div.MsoFooter
+                {mso-style-link:"Footer Char";
+                    margin:0in;
+                    margin-bottom:.0001pt;
+                    font-size:12.0pt;
+                    font-family:"Times New Roman",serif;}
+                p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+                {margin-right:0in;
+                    margin-left:0in;
+                    font-size:12.0pt;
+                    font-family:"Times New Roman",serif;}
+                p.msonormal0, li.msonormal0, div.msonormal0
+                {mso-style-name:msonormal;
+                    margin-right:0in;
+                    margin-left:0in;
+                    font-size:12.0pt;
+                    font-family:"Times New Roman",serif;}
+                span.HeaderChar
+                {mso-style-name:"Header Char";
+                    mso-style-link:Header;
+                    font-family:"Times New Roman",serif;}
+                span.FooterChar
+                {mso-style-name:"Footer Char";
+                    mso-style-link:Footer;
+                    font-family:"Times New Roman",serif;}
+                .MsoChpDefault
+                {font-size:10.0pt;}
+                /* Page Definitions */
+                @page WordSection1
+                {size:8.5in 11.0in;
+                    margin:1.0in 1.0in 1.0in 1.0in;}
+                div.WordSection1
+                {page:WordSection1;}
+                -->
+                img {
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                </style>
+                <script type="text/javascript">
+                    var selectedRow = 0;
+                    var selectedCol = 0;
+                    function calculate(obj){
+                        var sum=0;
+                        for (var i=0; i<8; i++) {
+                            for (var j=0; j<4; j++) {
+                                if (obj.id == "myCheck"+i+j) {
+                                    selectedRow = i;
+                                    selectedCol = j;
+                                }
+                            }
+                        }
+                        for (var j=0; j<4; j++) {
+                            if (j!=selectedCol) {
+                                document.getElementById("myCheck"+selectedRow+j).checked = false;
+                            }
+                        }
+                        for (var i=0;i<7;i++){
+                            for(var j=0; j<4; j++){
+                                sum += document.getElementById("myCheck"+i+j).checked?j:0;
+                            }
+                        }
+                        document.getElementById('total').value = sum;
+                    }
+                </script>
+    </head>
+    
+    <body lang=zh-CN>
+        
+        <div class=WordSection1>
+            
+            <p class=MsoNormal align=center style='text-align:center'>广泛性焦虑7项量表(GAD-7)
+            </p>
+            
+            <p class=MsoNormal>&nbsp;</p>
+            
+            <p class=MsoNormal><b>姓名: <INPUT TYPE="text" style="font-size:14pt" id=name>
+                日期: <input type=date style=font-size:14pt id=date></b></p>
+            
+            <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+                style='border-collapse:collapse'>
+                <tr>
+                    <td width=1048 valign=top style='width:786.15pt;border:solid #BFBFBF 1.0pt;
+                        padding:0in 5.4pt 0in 5.4pt'>
+                        <p class=MsoNormal><b>在过去2周里，您被以下问题困扰的频率如何?</b></p>
+                        <p class=MsoNormal><b>&nbsp;</b></p>
+                    </td>
+                    <td width=16 valign=top style='width:12.1pt;border:solid #BFBFBF 1.0pt;
+                        border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+                        <p class=MsoNormal><b>根本没有</b></p>
+                    </td>
+                    <td width=79 valign=top style='width:59.35pt;border:solid #BFBFBF 1.0pt;
+                        border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+                        <p class=MsoNormal><b>有几天</b></p>
+                    </td>
+                    <td width=66 valign=top style='width:49.45pt;border:solid #BFBFBF 1.0pt;
+                        border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+                        <p class=MsoNormal><b>超过一半天数</b></p>
+                    </td>
+                    <td width=79 valign=top style='width:59.15pt;border:solid #BFBFBF 1.0pt;
+                        border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+                        <p class=MsoNormal><b>几乎每天</b></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width=1048 valign=top style='width:786.15pt;border:solid #BFBFBF 1.0pt;
+                        border-top:none;background:#F2F2F2;padding:0in 5.4pt 0in 5.4pt'>
+                        <p class=MsoListParagraph style='margin-top:5.0pt;margin-right:0in;
+                        margin-bottom:0in;margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in'><b><span
+                            style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp; </span>1. 感觉紧张、焦虑或不安</b></p>
+                    </td>
+                    <td width=16 valign=top style='width:12.1pt;border-top:none;border-left:none;
+                        border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+                        background:#F2F2F2;padding:0in 5.4pt 0in 5.4pt'>
+                        <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck00 value="0" onclick="calculate(this)"></p>
+                            </td>
+                    <td width=79 valign=top style='width:59.35pt;border-top:none;border-left:
+                        none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+                        background:#F2F2F2;padding:0in 5.4pt 0in 5.4pt'>
+                        <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck01 value="1" onclick="calculate(this)"></p>
+                            </td>
+                    <td width=66 valign=top style='width:49.45pt;border-top:none;border-left:
+                        none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+                        background:#F2F2F2;padding:0in 5.4pt 0in 5.4pt'>
+                        <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck02 value="2" onclick="calculate(this)"></p>
+                            </td>
+                    <td width=79 valign=top style='width:59.15pt;border-top:none;border-left:
+                        none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+                        background:#F2F2F2;padding:0in 5.4pt 0in 5.4pt'>
+                        <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck03 value="3" onclick="calculate(this)"></p>
+                            </td>
+                </tr>
+                <tr>
+                    <td width=1048 valign=top style='width:786.15pt;border:solid #BFBFBF 1.0pt;
+                        border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+                        <p class=MsoListParagraph style='margin-top:5.0pt;margin-right:0in;
+                        margin-bottom:0in;margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in'><b><span
+                            style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp; </span>2. 无法停止或控制担忧</b></p>
+                    </td>
+                    <td width=16 valign=top style='width:12.1pt;border-top:none;border-left:none;
+                        border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+                        padding:0in 5.4pt 0in 5.4pt'>
+                        <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck10 value="0" onclick="calculate(this)"></p>
+                            </td>
+                    <td width=79 valign=top style='width:59.35pt;border-top:none;border-left:
+                        none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+                        padding:0in 5.4pt 0in 5.4pt'>
+                        <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck11 value="1" onclick="calculate(this)"></p>
+                            </td>
+                    <td width=66 valign=top style='width:49.45pt;border-top:none;border-left:
+                        none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+                        padding:0in 5.4pt 0in 5.4pt'>
+                        <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck12 value="2" onclick="calculate(this)"></p>
+                            </td>
+                    <td width=79 valign=top style='width:59.15pt;border-top:none;border-left:
+                        none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+                        padding:0in 5.4pt 0in 5.4pt'>
+                        <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck13 value="3" onclick="calculate(this)"></p>
+                            </td>
+                </tr>
+                <tr>
+                    <td width=1048 valign=top style='width:786.15pt;border:solid #BFBFBF 1.0pt;
+                        border-top:none;background:#F2F2F2;padding:0in 5.4pt 0in 5.4pt'>
+                        <p class=MsoListParagraph style='margin-top:5.0pt;margin-right:0in;
+                        margin-bottom:0in;margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in'><b><span
+                            style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp; </span>3. 对各种事情担心太多</b></p>
+                    </td>
+                    <td width=16 valign=top style='width:12.1pt;border-top:none;border-left:none;
+                        border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+                        background:#F2F2F2;padding:0in 5.4pt 0in 5.4pt'>
+                        <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck20 value="0" onclick="calculate(this)"></p>
+                            </td>
+                    <td width=79 valign=top style='width:59.35pt;border-top:none;border-left:
+                        none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+                        background:#F2F2F2;padding:0in 5.4pt 0in 5.4pt'>
+                        <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck21 value="1" onclick="calculate(this)"></p>
+                            </td>
+                    <td width=66 valign=top style='width:49.45pt;border-top:none;border-left:
+                        none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+                        background:#F2F2F2;padding:0in 5.4pt 0in 5.4pt'>
+                        <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck22 value="2" onclick="calculate(this)"></p>
+                            </td>
+                    <td width=79 valign=top style='width:59.15pt;border-top:none;border-left:
+                        none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+                        background:#F2F2F2;padding:0in 5.4pt 0in 5.4pt'>
+                        <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck23 value="3" onclick="calculate(this)"></p>
+                            </td>
+                </tr>
+                <tr>
+                    <td width=1048 valign=top style='width:786.15pt;border:solid #BFBFBF 1.0pt;
+                        border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+                        <p class=MsoListParagraph style='margin-top:5.0pt;margin-right:0in;
+                        margin-bottom:0in;margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in'><b><span
+                            style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp; </span>4. 难以放松</b></p>
+                    </td>
+                    <td width=16 valign=top style='width:12.1pt;border-top:none;border-left:none;
+                        border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+                        padding:0in 5.4pt 0in 5.4pt'>
+                        <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck30 value="0" onclick="calculate(this)"></p>
+                            </td>
+                    <td width=79 valign=top style='width:59.35pt;border-top:none;border-left:
+                        none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+                        padding:0in 5.4pt 0in 5.4pt'>
+                        <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck31 value="1" onclick="calculate(this)"></p>
+                            </td>
+                    <td width=66 valign=top style='width:49.45pt;border-top:none;border-left:
+                        none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+                        padding:0in 5.4pt 0in 5.4pt'>
+                        <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck32 value="2" onclick="calculate(this)"></p>
+                            </td>
+                    <td width=79 valign=top style='width:59.15pt;border-top:none;border-left:
+                        none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+                        padding:0in 5.4pt 0in 5.4pt'>
+                        <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck33 value="3" onclick="calculate(this)"></p>
+                            </td>
+                </tr>
+                <tr>
+                    <td width=1048 valign=top style='width:786.15pt;border:solid #BFBFBF 1.0pt;
+                        border-top:none;background:#F2F2F2;padding:0in 5.4pt 0in 5.4pt'>
+                        <p class=MsoListParagraph style='margin-top:5.0pt;margin-right:0in;
+                        margin-bottom:0in;margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in'><b><span
+                            style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp; </span>5. 坐立不安，以至于很难安静地坐下来
+                        </b></p>
+                    </td>
+                    <td width=16 valign=top style='width:12.1pt;border-top:none;border-left:none;
+                        border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+                        background:#F2F2F2;padding:0in 5.4pt 0in 5.4pt'>
+                        <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck40 value="0" onclick="calculate(this)"></p>
+                            </td>
+                    <td width=79 valign=top style='width:59.35pt;border-top:none;border-left:
+                        none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+                        background:#F2F2F2;padding:0in 5.4pt 0in 5.4pt'>
+                        <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck41 value="1" onclick="calculate(this)"></p>
+                            </td>
+                    <td width=66 valign=top style='width:49.45pt;border-top:none;border-left:
+                        none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+                        background:#F2F2F2;padding:0in 5.4pt 0in 5.4pt'>
+                        <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck42 value="2" onclick="calculate(this)"></p>
+                            </td>
+                    <td width=79 valign=top style='width:59.15pt;border-top:none;border-left:
+                        none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+                        background:#F2F2F2;padding:0in 5.4pt 0in 5.4pt'>
+                        <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck43 value="3" onclick="calculate(this)"></p>
+                            </td>
+                </tr>
+                <tr>
+                    <td width=1048 valign=top style='width:786.15pt;border:solid #BFBFBF 1.0pt;
+                        border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+                        <p class=MsoListParagraph style='margin-top:5.0pt;margin-right:0in;
+                        margin-bottom:0in;margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in'><b><span
+                            style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp; </span>6. 变得容易生气或急躁</b></p>
+                    </td>
+                    <td width=16 valign=top style='width:12.1pt;border-top:none;border-left:none;
+                        border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+                        padding:0in 5.4pt 0in 5.4pt'>
+                        <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck50 value="0" onclick="calculate(this)"></p>
+                            </td>
+                    <td width=79 valign=top style='width:59.35pt;border-top:none;border-left:
+                        none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+                        padding:0in 5.4pt 0in 5.4pt'>
+                        <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck51 value="1" onclick="calculate(this)"></p>
+                            </td>
+                    <td width=66 valign=top style='width:49.45pt;border-top:none;border-left:
+                        none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+                        padding:0in 5.4pt 0in 5.4pt'>
+                        <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck52 value="2" onclick="calculate(this)"></p>
+                            </td>
+                    <td width=79 valign=top style='width:59.15pt;border-top:none;border-left:
+                        none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+                        padding:0in 5.4pt 0in 5.4pt'>
+                        <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck53 value="3" onclick="calculate(this)"></p>
+                            </td>
+                </tr>
+                <tr>
+                    <td width=1048 valign=top style='width:786.15pt;border:solid #BFBFBF 1.0pt;
+                        border-top:none;background:#F2F2F2;padding:0in 5.4pt 0in 5.4pt'>
+                        <p class=MsoListParagraph style='margin-top:5.0pt;margin-right:0in;
+                        margin-bottom:0in;margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in'><b><span
+                            style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp; </span>7. 感觉害怕，好像有可怕的事情要发生一样</b></p>
+                    </td>
+                    <td width=16 valign=top style='width:12.1pt;border-top:none;border-left:none;
+                        border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+                        background:#F2F2F2;padding:0in 5.4pt 0in 5.4pt'>
+                        <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck60 value="0" onclick="calculate(this)"></p>
+                            </td>
+                    <td width=79 valign=top style='width:59.35pt;border-top:none;border-left:
+                        none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+                        background:#F2F2F2;padding:0in 5.4pt 0in 5.4pt'>
+                        <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck61 value="1" onclick="calculate(this)"></p>
+                            </td>
+                    <td width=66 valign=top style='width:49.45pt;border-top:none;border-left:
+                        none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+                        background:#F2F2F2;padding:0in 5.4pt 0in 5.4pt'>
+                        <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck62 value="2" onclick="calculate(this)"></p>
+                            </td>
+                    <td width=79 valign=top style='width:59.15pt;border-top:none;border-left:
+                        none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+                        background:#F2F2F2;padding:0in 5.4pt 0in 5.4pt'>
+                        <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck63 value="3" onclick="calculate(this)"></p>
+                            </td>
+                </tr>
+                
+                <tr>
+                    <td width=1288 colspan=5 valign=top style='width:966.2pt;border:solid #BFBFBF 1.0pt;
+                        border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+                        <p class=MsoNormal><b>&nbsp;</b></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width=1048 valign=top style='width:786.15pt;border:solid #BFBFBF 1.0pt;
+                        border-top:none;background:#F2F2F2;padding:0in 5.4pt 0in 5.4pt'>
+                        <p class=MsoNormal><b>如果你选出以上任何问题，这些问题对你的工作、处理家中事务或与人相处时来说造成多大困难？</b></p>
+                    </td>
+                    <td width=16 valign=top style='width:12.1pt;border-top:none;border-left:none;
+                        border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+                        background:#F2F2F2;padding:0in 5.4pt 0in 5.4pt'>
+                        <p class=MsoNormal><b>完全没有困难</b></p>
+                    </td>
+                    <td width=79 valign=top style='width:59.35pt;border-top:none;border-left:
+                        none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+                        background:#F2F2F2;padding:0in 5.4pt 0in 5.4pt'>
+                        <p class=MsoNormal><b>有些困难</b></p>
+                    </td>
+                    <td width=66 valign=top style='width:49.45pt;border-top:none;border-left:
+                        none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+                        background:#F2F2F2;padding:0in 5.4pt 0in 5.4pt'>
+                        <p class=MsoNormal><b>非常困难</b></p>
+                    </td>
+                    <td width=79 valign=top style='width:59.15pt;border-top:none;border-left:
+                        none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+                        background:#F2F2F2;padding:0in 5.4pt 0in 5.4pt'>
+                        <p class=MsoNormal><b>极度困难</b></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width=1048 valign=top style='width:786.15pt;border:solid #BFBFBF 1.0pt;
+                        border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+                        <p class=MsoListParagraph style='margin-bottom:0in;margin-bottom:.0001pt'><b>&nbsp;</b></p>
+                    </td>
+                    <td width=16 valign=top style='width:12.1pt;border-top:none;border-left:none;
+                        border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+                        padding:0in 5.4pt 0in 5.4pt'>
+                        <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck70 id=myCheck83 value="0" onclick="calculate(this)"></p>
+                            </td>
+                    <td width=79 valign=top style='width:59.35pt;border-top:none;border-left:
+                        none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+                        padding:0in 5.4pt 0in 5.4pt'>
+                        <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck71 id=myCheck83 value="0" onclick="calculate(this)"></p>
+                            </td>
+                    <td width=66 valign=top style='width:49.45pt;border-top:none;border-left:
+                        none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+                        padding:0in 5.4pt 0in 5.4pt'>
+                        <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck72 id=myCheck83 value="0" onclick="calculate(this)"></p>
+                            </td>
+                    <td width=79 valign=top style='width:59.15pt;border-top:none;border-left:
+                        none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+                        padding:0in 5.4pt 0in 5.4pt'>
+                        <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck73 id=myCheck83 value="0" onclick="calculate(this)"></p>
+                            </td>
+                </tr>
+            </table>
+            
+            <p class=MsoNormal>您的总分:<span lang=EN style='font-family:SimSun'>　</span>
+            
+            <input type=number style="font-size:14pt" id=total size=2 min=0 max=27>
+                
+                /21</p>
+                
+                <p class=MsoNormal>结果: <INPUT TYPE=text id=result style="width:100%"></p>
+                    <!--<p class=MsoNormal>Result: <textarea name="result" cols="40" rows="3"></textarea></p>-->
+                    <!--    <p style="page-break-after: always;">&nbsp;</p>-->
+                    <p></p>
+                    <p class=MsoListParagraph>*一些专家建议用大于等于8分代替10分作为阈值以提高广泛性焦虑的检出敏感度。<a href="https://www.ncbi.nlm.nih.gov/pubmed/26719105">(Plummer F, 2016)</a></p>
+                    
+                    <p class=MsoNormal>在最初研究中，GAD-7总分≥10对于检测广泛性焦虑的敏感性为89%，特异性为82%。 <a href="https://www.ncbi.nlm.nih.gov/pubmed/16717171">(Spitzer RL, 2006)</a></p>
+                    
+                    <p class=MsoNormal>GAD-7也用于其它三种常见焦虑症 — 恐慌症, 社交恐惧症, 创伤后应激障碍(PTSD)的监测筛查。<a href="https://www.ncbi.nlm.nih.gov/pubmed/17339617">(Kroenke K, 2007)</a></p>
+                    <p class=MsoNormal>如果总分大于8分，建议进一步的评估(包括诊断性访谈和精神状态检查)或转诊精神专科医生。</p>
+                    
+                    
+                    <p class=MsoNormal>致谢: GAD-7是由Drs. Robert L. Spitzer, Janet B.W. Williams, Kurt Kroenke 及其同事在辉瑞公司教育基金资助下完成。无需许可即可复制、翻译、展示和传播。</p>
+                    
+                    <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=582
+                        style='width:436.5pt;background:#F0F0F0;border-collapse:collapse'>
+                        <tr>
+                            <td width=87 style='width:65.25pt;border:none;border-bottom:solid silver 1.0pt;
+                                padding:2.25pt 7.5pt 0in 7.5pt'>
+                                <p class=MsoNormal style='margin-top:12.75pt;margin-right:0in;margin-bottom:
+                                12.75pt;margin-left:0in'><b><span style='font-size:11.5pt;font-family:"Calibri",sans-serif;
+                                    color:#595959'>总分</span></b></p>
+                            </td>
+                            <td style='border:none;border-bottom:solid silver 1.0pt;padding:2.25pt 7.5pt 0in 7.5pt'>
+                                <p class=MsoNormal style='margin-top:12.75pt;margin-right:0in;margin-bottom:
+                                12.75pt;margin-left:0in'><b><span style='font-size:11.5pt;font-family:"Calibri",sans-serif;
+                                    color:#595959'>严重程度</span></b></p>
+                            </td>
+                            <td style='border:none;border-bottom:solid silver 1.0pt;padding:2.25pt 7.5pt 0in 7.5pt'>
+                                <p class=MsoNormal style='margin-top:12.75pt;margin-right:0in;margin-bottom:
+                                12.75pt;margin-left:0in'><b><span style='font-size:11.5pt;font-family:"Calibri",sans-serif;
+                                    color:#595959'>提示</span></b></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style='border:none;border-bottom:solid #D7D7D7 1.0pt;padding:2.25pt 7.5pt 0in 7.5pt'>
+                                <p class=MsoNormal style='margin-top:12.75pt;margin-right:0in;margin-bottom:
+                                12.75pt;margin-left:0in'><span style='font-size:11.0pt;font-family:"Calibri",sans-serif;
+                                    color:#595959'>5-9</span></p>
+                            </td>
+                            <td style='border:none;border-bottom:solid #D7D7D7 1.0pt;padding:2.25pt 7.5pt 0in 7.5pt'>
+                                <p class=MsoNormal style='margin-top:12.75pt;margin-right:0in;margin-bottom:
+                                12.75pt;margin-left:0in'><span style='font-size:11.0pt;font-family:"Calibri",sans-serif;
+                                    color:#595959'>轻度</span></p>
+                            </td>
+                            <td style='border:none;border-bottom:solid #D7D7D7 1.0pt;padding:2.25pt 7.5pt 0in 7.5pt'>
+                                <p class=MsoNormal style='margin-top:12.75pt;margin-right:0in;margin-bottom:
+                                12.75pt;margin-left:0in'><span style='font-size:11.0pt;font-family:"Calibri",sans-serif;
+                                    color:#595959'>监测</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style='border:none;border-bottom:solid #D7D7D7 1.0pt;padding:2.25pt 7.5pt 0in 7.5pt'>
+                                <p class=MsoNormal style='margin-top:12.75pt;margin-right:0in;margin-bottom:
+                                12.75pt;margin-left:0in'><span style='font-size:11.0pt;font-family:"Calibri",sans-serif;
+                                    color:#595959'>10-14</span></p>
+                            </td>
+                            <td style='border:none;border-bottom:solid #D7D7D7 1.0pt;padding:2.25pt 7.5pt 0in 7.5pt'>
+                                <p class=MsoNormal style='margin-top:12.75pt;margin-right:0in;margin-bottom:
+                                12.75pt;margin-left:0in'><span style='font-size:11.0pt;font-family:"Calibri",sans-serif;
+                                    color:#595959'>中度</span></p>
+                            </td>
+                            <td style='border:none;border-bottom:solid #D7D7D7 1.0pt;padding:2.25pt 7.5pt 0in 7.5pt'>
+                                <p class=MsoNormal style='margin-top:12.75pt;margin-right:0in;margin-bottom:
+                                12.75pt;margin-left:0in'><span style='font-size:11.0pt;font-family:"Calibri",sans-serif;
+                                    color:#595959'>可能具有临床意义</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style='border:none;border-bottom:solid #D7D7D7 1.0pt;padding:2.25pt 7.5pt 0in 7.5pt'>
+                                <p class=MsoNormal style='margin-top:12.75pt;margin-right:0in;margin-bottom:
+                                12.75pt;margin-left:0in'><span style='font-size:11.0pt;font-family:"Calibri",sans-serif;
+                                    color:#595959'>15-21</span></p>
+                            </td>
+                            <td style='border:none;border-bottom:solid #D7D7D7 1.0pt;padding:2.25pt 7.5pt 0in 7.5pt'>
+                                <p class=MsoNormal style='margin-top:12.75pt;margin-right:0in;margin-bottom:
+                                12.75pt;margin-left:0in'><span style='font-size:11.0pt;font-family:"Calibri",sans-serif;
+                                    color:#595959'>严重</span></p>
+                            </td>
+                            <td style='border:none;border-bottom:solid #D7D7D7 1.0pt;padding:2.25pt 7.5pt 0in 7.5pt'>
+                                <p class=MsoNormal style='margin-top:12.75pt;margin-right:0in;margin-bottom:
+                                12.75pt;margin-left:0in'><span style='font-size:11.0pt;font-family:"Calibri",sans-serif;
+                                    color:#595959'>很可能需确保积极的治疗</span></p>
+                            </td>
+                        </tr>
+                    </table>
+                    
+                    <p class=MsoNormal><img src=image001.png style="height:40%"></p>
+                        <p class=MsoNormal><img src=image002.png style="height:40%"></p>
+                            
+                            <p class=MsoNormal>声明: 本工具仅供用于监测和筛查症状的严重程度，不能替代临床评估及诊断。</p>
+        </div>
+        
+    </body>
+    
+</html>
+

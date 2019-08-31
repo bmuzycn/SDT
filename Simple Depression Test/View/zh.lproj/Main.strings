@@ -1,0 +1,121 @@
+
+/* Class = "UIButton"; normalTitle = "<Back"; ObjectID = "0yH-IL-Eza"; */
+"0yH-IL-Eza.normalTitle" = "<后退";
+
+/* Class = "UIButton"; normalTitle = "<Back"; ObjectID = "1i6-KP-Wzz"; */
+"1i6-KP-Wzz.normalTitle" = "<后退";
+
+/* Class = "UIBarButtonItem"; title = "<Back"; ObjectID = "2Rb-64-2dy"; */
+"2Rb-64-2dy.title" = "<后退";
+
+/* Class = "UIButton"; normalTitle = "More than half the days"; ObjectID = "2u5-8L-vDL"; */
+"2u5-8L-vDL.normalTitle" = "超过一半的天数";
+
+/* Class = "UILabel"; text = "Existing User"; ObjectID = "3Dk-8u-Erb"; */
+"3Dk-8u-Erb.text" = "已存在用户";
+
+/* Class = "UIButton"; normalTitle = "Next>"; ObjectID = "8pt-KA-HUG"; */
+"8pt-KA-HUG.normalTitle" = "下一个>";
+
+/* Class = "UIButton"; normalTitle = "Nearly every day"; ObjectID = "8tz-Mc-7UT"; */
+"8tz-Mc-7UT.normalTitle" = "几乎每一天";
+
+/* Class = "UILabel"; text = "Question"; ObjectID = "9q9-ok-Fmc"; */
+"9q9-ok-Fmc.text" = "问题";
+
+/* Class = "UIButton"; normalTitle = "Several days"; ObjectID = "BIR-nE-FLV"; */
+"BIR-nE-FLV.normalTitle" = "有几天";
+
+/* Class = "UINavigationItem"; title = "Charts"; ObjectID = "Bl0-2U-jUO"; */
+"Bl0-2U-jUO.title" = "图表";
+
+/* Class = "UITabBarItem"; title = "Report"; ObjectID = "Cv4-Zf-PMS"; */
+"Cv4-Zf-PMS.title" = "报告";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "Imw-qc-mXO"; */
+"Imw-qc-mXO.normalTitle" = "保存";
+
+/* Class = "UIButton"; normalTitle = ">>"; ObjectID = "Lm6-uf-wI0"; */
+"Lm6-uf-wI0.normalTitle" = ">>";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "M9U-OX-a7G"; */
+"M9U-OX-a7G.text" = "标签";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "QTG-VO-6z0"; */
+"QTG-VO-6z0.text" = "标签";
+
+/* Class = "UITabBarItem"; title = "Charts"; ObjectID = "RGZ-X2-0bj"; */
+"RGZ-X2-0bj.title" = "图表";
+
+/* Class = "UITabBarItem"; title = "Info"; ObjectID = "VCt-qU-IDE"; */
+"VCt-qU-IDE.title" = "信息";
+
+/* Class = "UITabBarItem"; title = "Users"; ObjectID = "VH7-ax-MLY"; */
+"VH7-ax-MLY.title" = "用户";
+
+/* Class = "UIButton"; normalTitle = "New User"; ObjectID = "Vwt-jV-aMo"; */
+"Vwt-jV-aMo.normalTitle" = "新用户";
+
+/* Class = "UINavigationItem"; title = "Report"; ObjectID = "X6E-rg-ld4"; */
+"X6E-rg-ld4.title" = "报告";
+
+/* Class = "UIButton"; normalTitle = "<<"; ObjectID = "YDb-nC-QJz"; */
+"YDb-nC-QJz.normalTitle" = "<<";
+
+/* Class = "UIButton"; normalTitle = "Report"; ObjectID = "Z50-Cc-sE8"; */
+"Z50-Cc-sE8.normalTitle" = "报告";
+
+/* Class = "UISegmentedControl"; dqv-ER-SeV.segmentTitles[0] = "Bar Chart"; ObjectID = "dqv-ER-SeV"; */
+"dqv-ER-SeV.segmentTitles[0]" = "柱状图";
+
+/* Class = "UISegmentedControl"; dqv-ER-SeV.segmentTitles[1] = "Line Chart"; ObjectID = "dqv-ER-SeV"; */
+"dqv-ER-SeV.segmentTitles[1]" = "折线图";
+
+/* Class = "UITabBarItem"; title = "Test"; ObjectID = "eFq-4M-UV3"; */
+"eFq-4M-UV3.title" = "测试";
+
+/* Class = "UIButton"; normalTitle = "Not at all"; ObjectID = "hwu-zb-Vwv"; */
+"hwu-zb-Vwv.normalTitle" = "完全没有";
+
+/* Class = "UIButton"; normalTitle = "Delete"; ObjectID = "jQL-wM-9Wb"; */
+"jQL-wM-9Wb.normalTitle" = "删除";
+
+/* Class = "UITextView"; text = "Over the last 2 weeks, how often have you been bothered by any of the following problems?"; ObjectID = "jk7-f3-aeS"; */
+"jk7-f3-aeS.text" = "在最近两周，您有多长时间被以下问题所困扰？";
+
+/* Class = "UIButton"; normalTitle = "Export"; ObjectID = "nSh-r5-spV"; */
+"nSh-r5-spV.normalTitle" = "输出";
+
+/* Class = "UIButton"; normalTitle = "Next>>"; ObjectID = "u90-k4-sF7"; */
+"u90-k4-sF7.normalTitle" = "之后>>";
+
+/* Class = "UIButton"; normalTitle = "Select"; ObjectID = "uIX-yG-wKY"; */
+"uIX-yG-wKY.normalTitle" = "选择";
+
+/* Class = "UILabel"; text = "New User"; ObjectID = "wSf-Kv-Ohm"; */
+"wSf-Kv-Ohm.text" = "新用户";
+
+/* Class = "UIButton"; normalTitle = "<<Prev."; ObjectID = "xt8-2C-eaR"; */
+"xt8-2C-eaR.normalTitle" = "<<之前";
+
+"qUL-yU-bL0.text" = "主题";
+
+"Jnu-B2-oUu.normalTitle" = "简约";
+
+"wCv-uS-4GL.normalTitle" = "休闲";
+
+"DLQ-ij-aOl.normalTitle" = "复古";
+
+"Klx-MK-y9P.normalTitle" = "春天";
+
+"xuQ-mu-Jq4.normalTitle" = "温暖";
+
+"Slh-eB-Es9.normalTitle" = "粉色";
+
+"OIO-bM-ae2.text" = "字体颜色";
+
+"k1x-Da-IgV.text" = "背景颜色";
+
+"6Xh-jT-bWb.text" = "字体大小";
+
+"AGH-kp-ZnU.text" = "文字";

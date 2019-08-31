@@ -1,0 +1,8 @@
+/* 
+  InfoPlist.strings
+  Simple Depression Test
+
+  Created by Yu Zhang on 8/28/18.
+  Copyright © 2018 Yu Zhang. All rights reserved.
+*/
+"CFBundleDisplayName" = "简单抑郁测试PHQ-9";

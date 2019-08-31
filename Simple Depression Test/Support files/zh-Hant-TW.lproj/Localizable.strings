@@ -1,0 +1,312 @@
+/*
+ Localizable.strings
+ Simple Depression Test
+ 
+ Created by Yu Zhang on 8/28/18.
+ Copyright © 2018 Yu Zhang. All rights reserved.
+ */
+"Over the last 2 weeks, how often have you been bothered by any of the following problems?" = "在過去兩個星期，有多少時候您受到以下任何問題所困擾?";
+
+"Little interest or pleasure in doing things" = "做事時提不起勁或沒有樂趣";
+
+"Feeling down, depressed, or hopeless" = "感到心情低落、沮喪或絕望";
+
+"Trouble falling or staying asleep, or sleeping too much" = "入睡困難、睡不安穩或睡眠過多";
+
+"Feeling tired or having little energy" = "感覺疲倦或沒有活力";
+
+"Poor appetite or overeating" = "食慾不振或吃太多";
+
+"Feeling bad about yourself or that you are a failure or have let yourself or your family down" = "覺得自己很糟—或覺得自己很失敗，或讓自己或家人失望";
+
+"Trouble concentrating on things, such as reading the newspaper or watching television" = "對事物專注有困難，例如閱讀報紙或看電視時";
+
+"Moving or speaking so slowly that other people could have noticed. Or the opposite being so figety or restless that you have been moving around a lot more than usual" = "動作或說話速度緩慢到別人已經察覺，或正好相反——煩躁或坐立不安、動來動去的情況更勝於平常";
+
+"Thoughts that you would be better off dead, or of hurting yourself" = "有不如死掉或用某種方式傷害自己的念頭";
+
+"If you checked off any problems, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people?" = "如果您發現自己有上述所提的任何問題，這些問題在您工作、照顧家庭事務或與他人相處上造成了多大的困難?";
+
+"Major Depressive Disorder" = "重性抑鬱障礙（抑鬱症）";
+
+"Other Depressive Disorder" = "其他抑鬱障礙";
+
+"depressive symptoms but have no effect on your daily life and normal functioning" = "抑鬱症狀但對日常生活及正常功能沒有影響";
+
+"no depression" = "沒有抑鬱";
+
+"depressed mood but cannot be confirmed as depressive disorder at this point" = "具有抑鬱情緒但目前無法確診為抑鬱癥";
+
+"(For initial patient with suicidal or self-injury risk, you need to see a doctor as soon as possible)" = "（對於初始病人，因為您具有自殺或自殘風險，請立即與您的醫生聯絡）";
+
+"no depression" = "沒有抑鬱（無症狀）";
+
+"minimal depression" = "極輕度抑鬱";
+
+"mild depression" = "輕度抑鬱";
+
+"moderate depression" = "中度抑鬱";
+
+"moderately severe depression" = "中重度抑鬱";
+
+"severe depression" = "重度抑鬱";
+
+"Result" = "結果";
+
+"Your probably have " = "您可能有";
+
+"Your score is " = "您的評分為 ";
+
+"Your prorated score is " = "您的按比例得分為 ";
+
+"Your probably have " = "您可能為";
+
+" with severity score of " = " 嚴重程度評分為 ";
+
+"as " = "，屬於";
+
+" as " = "，屬於 ";
+
+"Restart" = "重新開始";
+
+"Save" = "保存";
+
+"Since the questionnaire relies on patient self-report, all responses should be verified by the clinician, and a definitive diagnosis is made on clinical grounds taking into account how well the patient understood the questionnaire, as well as other relevant information from the patient. Diagnoses of Major Depressive Disorder or Other Depressive Disorder also require impairment of social, occupational, or other important areas of functioning (Question #10) and ruling out normal bereavement, a history of a Manic Episode (Bipolar Disorder), and a physical disorder, medication, or other drug as the biological cause of the depressive symptoms." = "由於此調查問卷依賴患者的自我報告，所有回答需要臨床醫生的確認，而且需要結合臨床和患者對問題的理解以及其他相關信息綜合考量以給出確定性的診斷。抑鬱症和其他抑鬱障礙的診斷還需要滿足社交、職業工作或或其他功能性損害（問題10），並且除外喪失親友引起的悲痛、躁狂發作（雙向障礙）病史以及軀體、藥物、其他毒品引發的生物源性的抑鬱症狀";
+
+"Continue" = "繼續";
+
+"Not difficult at all" = "毫無困難";
+
+"Somewhat difficult" = "有點困難";
+
+"Very difficult" = "非常困難";
+
+"Extremely difficult" = "極度困難";
+
+"Not at all" = "完全沒有";
+
+"Several days" = "少數幾天";
+
+"More than half the days" = "一半以上的天數";
+
+"Nearly every day" = "幾乎每天";
+
+"question: " = "題目: ";
+
+"Anhedonia" = "快感缺乏";
+
+"Low Mood" = "情緒低落";
+
+"Insomnia" = "失眠";
+
+"Sleep" = "睡眠";
+
+"Fatigue" = "疲倦";
+
+"Appetite" = "食慾";
+
+"Worthlessness" = "價值感";
+
+"Concentration" = "注意力";
+
+"Movement" = "運動";
+
+"Suicide" = "自殺";
+
+"Function impairment" = "功能損害";
+
+"⭕️" = "✅";
+
+"Delete Data" = "刪除數據";
+
+"Delete" = "刪除";
+
+"Warning! Data cannot be recovered after delete." = "警告！數據刪除後將無法恢復";
+
+"Cancel" = "取消";
+
+"Delete User" = "刪除用戶";
+
+"Warning! All the records under this user will be deleted." = "警告！所有該用戶下的紀錄獎杯刪除";
+
+"Hi, " = "您好！";
+
+" , Note!" = "，請注意：";
+
+" Your Score:" = " 您的評分為：";
+
+"Your Score is " = "您的評分為：";
+
+"New User" = "新用戶";
+
+"Enter a name" = "請输入您的名字";
+
+"Enter a username" = "請输入用戶名";
+
+"Note" = "注意";
+
+"Please input a user name" = "請輸入用戶名";
+
+"User exists!" = "用戶名已存在！";
+
+"Depression Severity Reference:" = "分級標準：";
+
+"Severe 21-27\nModerate severe 16-20\nMild moderate 10-15\nMild 5-9\nMinimal or None 0-4" = "重度 21-27\n中度 16-20\n輕中度 10-15\n輕度 5-9\n極輕或無 0-4";
+
+"Warning⚠️" = "警告⚠️";
+
+"Your result will be lost. Still want to quit?" = "您的結果將會丟失，仍然要退出嗎？";
+
+"Warning! Data cannot be recovered after delete." = "警告！數據刪除後將無法恢復";
+
+"Hi!" = "嗨！";
+
+"Your report has been successfully printed to a PDF file.\n\nWhat do you want to do now?" = "您的PDF報告已經生成";
+
+"Save pdf" = "保存PDF";
+
+"Send by Email" = "發送電郵";
+
+"Nothing" = "取消";
+
+"g1" = "gcn1";
+
+"g2" = "gcn2";
+
+"g3" = "gcn3";
+
+"minimal" = "極輕微/無";
+
+"mild" = "輕度";
+
+"mild moderate" = "中度";
+
+"moderate severe" = "中重度";
+
+"severe" = "重度";
+
+"Simplified Chinese" = "簡體中文";
+
+"Traditional Chinese" = "繁體中文";
+
+"English" = "英語";
+
+"Settings" = "设置";
+
+"Preferred Language" = "首選語言";
+
+"Display Setting" = "顯示設置";
+
+"Theme Customize" = "主題設定";
+
+"More Information" = "更多信息";
+
+"About this version" = "關於版本";
+
+"'s Records" = "的記錄";
+
+"Your Score:" = "您的分數";
+
+"Switch language to" = "切換語言為";
+
+"Do you want to continue?" = "要繼續嗎？";
+
+"Spanish" = "西班牙語";
+
+"A 9-item Depression Scale" = "含9個條目的抑鬱量表";
+
+"A 7-item Anxiety Scale" = "含7個條目的焦慮量表";
+
+"Other Screeners" = "其它篩查工具";
+
+"Switch to" = "切換至";
+
+"GAD-7 is a sensitive self-administrated test to assess generalized anxiety disorder(GAD), normally used in outpatient and primary care settings for referral to psychiatrist pending outcome. However, it cannot be used as replacement for clinical assessment and additional evaluation should be used to confirm a diagnosis of GAD." = "GAD-7是一種敏感的自我管理測試，用於評估廣泛性焦慮症（GAD），通常用於門診和初級保健機構。但它不能替代臨床評估來確認GAD的診斷。";
+
+"no anxiety" = "沒有焦慮";
+
+"mild anxiety" = "輕度焦慮";
+
+"moderate anxiety" = "中度焦慮";
+
+"severe anxiety" = "重度焦慮";
+
+"You may experience " = "您可能經歷";
+
+"." = "。";
+
+"Your probably have anxiety disorder" = "您可能有焦慮障礙";
+
+" with severity score of " = "嚴重程度分數為";
+
+"To determine the presence and type of anxiety disorder, further assessment by a mental health professional is recommended." = "為了確認焦慮症的存在和類型，建議由精神衛生專業人員進一步評估。";
+
+"(The result indicates your suicide risk increased. Regardless of your total score, you should see a doctor as soon as possible)" = "（結果表明您的自殺風險增加。無論您的總分如何，您都應該盡快去看醫生）";
+
+"(For newly detection of suicide or self-injury risk, you need to see a doctor as soon as possible)" = "（對於新發現的自殺或自傷風險，您需要盡快去看醫生）";
+
+"A full clinical assessment is recommended." = "建議進行全面的臨床評估。";
+
+"(according to DSM-5)" = "（根據DSM-5）";
+
+"Interest deficit (anhedonia)" = "快感缺乏";
+
+"Depressed mood" = "心情低落";
+
+"Sleep disorder (increased or decreased)" = "睡眠障礙（增加或減少）";
+
+"Energy deficit" = "乏力";
+
+"Appetite disorder (increased or decreased)" = "食慾改變";
+
+"Guilt (worthlessness, hopelessness, regret)" = "內疚（無價值，無望，後悔）";
+
+"Concentration deficit" = "注意力缺陷";
+
+"Psychomotor retardation or agitation" = "精神運動性遲緩或激越";
+
+"Suicidality" = "自殺";
+
+"Feeling nervous, anxious or on edge" = "感覺緊張、焦慮或不安";
+"Not being able to stop or control worrying" = "無法停止或控制擔憂";
+"Worrying too much about different things" = "對不同的事情擔心過多";
+"Trouble relaxing" = "難以放鬆";
+"Being so restless that it is hard to sit still" = "坐立不安，以至於很難安靜的坐下來";
+"Becoming easily annoyed or irritable" = "變得容易生氣或急躁";
+"Feeling afraid as if something awful might happen" = "感覺害怕，好像有可怕的事情要發生一樣";
+"If you checked off any problems, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people?" = "如果您有上述問題，這些問題在多大程度對您的工作，照料家裡的事情，或與他人相處造成困難？";
+
+"Feeling nervous or anxious" = "緊張或焦慮";
+"Difficult to control the worry" = "難以控制的擔憂";
+"Worrying too much about different things" = "對不同的事過度擔憂";
+"Feeling nervous" = "緊張感";
+"Difficult to ctrl..." = "難以控制";
+"Worry too much" = "過分擔憂";
+"Trouble relaxing" = "難以放鬆";
+"Restlessness" = "煩躁";
+"Irritability" = "易怒";
+"Feeling afraid" = "恐懼";
+"Function impairment" = "功能損害";
+
+"You have " = "您有 ";
+
+" unanswered questions which cause failed to calculate the total score. Please review and complete all of the items." = " 個未完成問題導致無法計算總分，請您檢查並完成所有問題。";
+
+" unanswered questions. " = " 個未完成問題。";
+
+"Your prorated score is " = "您的按比例得分為 ";
+
+"None to minimal" = "無至最小";
+
+"Mild" = "輕度";
+
+"Moderate" = "中度";
+
+"Moderately severe" = "中重度";
+
+"Severe" = "重度";
+
+"Your total score is " = "您的總分為 ";
+
+"Ok" = "確定";
+

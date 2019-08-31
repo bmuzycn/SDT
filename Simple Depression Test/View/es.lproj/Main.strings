@@ -1,0 +1,150 @@
+
+/* Class = "UIButton"; normalTitle = "<Back"; ObjectID = "0yH-IL-Eza"; */
+"0yH-IL-Eza.normalTitle" = "<Espalda";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "1Af-Zs-Kf8"; */
+"1Af-Zs-Kf8.text" = "Etiqueta";
+
+/* Class = "UIBarButtonItem"; title = "<Back"; ObjectID = "2Rb-64-2dy"; */
+"2Rb-64-2dy.title" = "<Espalda";
+
+/* Class = "UIButton"; normalTitle = "More than half the days"; ObjectID = "2u5-8L-vDL"; */
+"2u5-8L-vDL.normalTitle" = "Más de la mitad de los días";
+
+/* Class = "UILabel"; text = "Existing User"; ObjectID = "3Dk-8u-Erb"; */
+"3Dk-8u-Erb.text" = "Usuario existente";
+
+/* Class = "UILabel"; text = "Font Size"; ObjectID = "6Xh-jT-bWb"; */
+"6Xh-jT-bWb.text" = "Tamaño de fuente";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "70V-Ce-tH8"; */
+"70V-Ce-tH8.text" = "Título";
+
+/* Class = "UIButton"; normalTitle = "Next>"; ObjectID = "8pt-KA-HUG"; */
+"8pt-KA-HUG.normalTitle" = "Siguiente>";
+
+/* Class = "UIButton"; normalTitle = "Nearly every day"; ObjectID = "8tz-Mc-7UT"; */
+"8tz-Mc-7UT.normalTitle" = "Casi todos los dias";
+
+/* Class = "UILabel"; text = "Question"; ObjectID = "9q9-ok-Fmc"; */
+"9q9-ok-Fmc.text" = "Pregunta";
+
+/* Class = "UILabel"; text = "Text"; ObjectID = "AGH-kp-ZnU"; */
+"AGH-kp-ZnU.text" = "Texto";
+
+/* Class = "UIButton"; normalTitle = "max limit"; ObjectID = "B0k-Mf-aYY"; */
+"B0k-Mf-aYY.normalTitle" = "límite máximo";
+
+/* Class = "UIButton"; normalTitle = "Several days"; ObjectID = "BIR-nE-FLV"; */
+"BIR-nE-FLV.normalTitle" = "Varios dias";
+
+/* Class = "UINavigationItem"; title = "Charts"; ObjectID = "Bl0-2U-jUO"; */
+"Bl0-2U-jUO.title" = "Cartas";
+
+/* Class = "UITabBarItem"; title = "Report"; ObjectID = "Cv4-Zf-PMS"; */
+"Cv4-Zf-PMS.title" = "Informe";
+
+/* Class = "UIButton"; normalTitle = "Retro"; ObjectID = "DLQ-ij-aOl"; */
+"DLQ-ij-aOl.normalTitle" = "Retro";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "Imw-qc-mXO"; */
+"Imw-qc-mXO.normalTitle" = "Salvar";
+
+/* Class = "UIButton"; normalTitle = "Minimalist"; ObjectID = "Jnu-B2-oUu"; */
+"Jnu-B2-oUu.normalTitle" = "Minimalista";
+
+/* Class = "UIButton"; normalTitle = "Spring"; ObjectID = "Klx-MK-y9P"; */
+"Klx-MK-y9P.normalTitle" = "Primavera";
+
+/* Class = "UIButton"; normalTitle = ">>"; ObjectID = "Lm6-uf-wI0"; */
+"Lm6-uf-wI0.normalTitle" = ">>";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "M9U-OX-a7G"; */
+"M9U-OX-a7G.text" = "Etiqueta";
+
+/* Class = "UILabel"; text = "Font Color"; ObjectID = "OIO-bM-ae2"; */
+"OIO-bM-ae2.text" = "Color de fuente";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "QTG-VO-6z0"; */
+"QTG-VO-6z0.text" = "Etiqueta";
+
+/* Class = "UITabBarItem"; title = "Charts"; ObjectID = "RGZ-X2-0bj"; */
+"RGZ-X2-0bj.title" = "Cartas";
+
+/* Class = "UIButton"; normalTitle = "Pink"; ObjectID = "Slh-eB-Es9"; */
+"Slh-eB-Es9.normalTitle" = "Rosado";
+
+/* Class = "UITabBarItem"; title = "settings"; ObjectID = "VCt-qU-IDE"; */
+"VCt-qU-IDE.title" = "ajustes";
+
+/* Class = "UITabBarItem"; title = "Users"; ObjectID = "VH7-ax-MLY"; */
+"VH7-ax-MLY.title" = "Usuarios";
+
+/* Class = "UIButton"; normalTitle = "New User"; ObjectID = "Vwt-jV-aMo"; */
+"Vwt-jV-aMo.normalTitle" = "Nuevo usuario";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "Wa2-jL-LQk"; */
+"Wa2-jL-LQk.title" = "ít";
+
+/* Class = "UINavigationItem"; title = "Report"; ObjectID = "X6E-rg-ld4"; */
+"X6E-rg-ld4.title" = "Informe";
+
+/* Class = "UIButton"; normalTitle = "<<"; ObjectID = "YDb-nC-QJz"; */
+"YDb-nC-QJz.normalTitle" = "<<";
+
+/* Class = "UIButton"; normalTitle = "Report"; ObjectID = "Z50-Cc-sE8"; */
+"Z50-Cc-sE8.normalTitle" = "Informe";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "Zfw-n4-CJv"; */
+"Zfw-n4-CJv.text" = "Detalle";
+
+/* Class = "UITextField"; placeholder = "Enter a username"; ObjectID = "bqn-9u-FEK"; */
+"bqn-9u-FEK.placeholder" = "Introduzca un nombre de usuario";
+
+/* Class = "UISegmentedControl"; dqv-ER-SeV.segmentTitles[0] = "Bar Chart"; ObjectID = "dqv-ER-SeV"; */
+"dqv-ER-SeV.segmentTitles[0]" = "Gráfico de barras";
+
+/* Class = "UISegmentedControl"; dqv-ER-SeV.segmentTitles[1] = "Line Chart"; ObjectID = "dqv-ER-SeV"; */
+"dqv-ER-SeV.segmentTitles[1]" = "Gráfico de linea";
+
+/* Class = "UITabBarItem"; title = "Test"; ObjectID = "eFq-4M-UV3"; */
+"eFq-4M-UV3.title" = "Prueba";
+
+/* Class = "UIButton"; normalTitle = "Not at all"; ObjectID = "hwu-zb-Vwv"; */
+"hwu-zb-Vwv.normalTitle" = "Para nada";
+
+/* Class = "UIButton"; normalTitle = "Delete"; ObjectID = "jQL-wM-9Wb"; */
+"jQL-wM-9Wb.normalTitle" = "Borrar";
+
+/* Class = "UITextView"; text = "Over the last 2 weeks, how often have you been bothered by any of the following problems?"; ObjectID = "jk7-f3-aeS"; */
+"jk7-f3-aeS.text" = "Durante las últimas 2 semanas, ¿qué tan seguido le han afectado cualquiera de los siguientes problemas?";
+
+/* Class = "UILabel"; text = "Background Color"; ObjectID = "k1x-Da-IgV"; */
+"k1x-Da-IgV.text" = "Color de fondo";
+
+/* Class = "UIButton"; normalTitle = "Export"; ObjectID = "nSh-r5-spV"; */
+"nSh-r5-spV.normalTitle" = "Exportar";
+
+/* Class = "UILabel"; text = "Themes"; ObjectID = "qUL-yU-bL0"; */
+"qUL-yU-bL0.text" = "Temas";
+
+/* Class = "UIButton"; normalTitle = "Next>>"; ObjectID = "u90-k4-sF7"; */
+"u90-k4-sF7.normalTitle" = "Siguiente>>";
+
+/* Class = "UIButton"; normalTitle = "Select"; ObjectID = "uIX-yG-wKY"; */
+"uIX-yG-wKY.normalTitle" = "Seleccionar";
+
+/* Class = "UIButton"; normalTitle = "Casual"; ObjectID = "wCv-uS-4GL"; */
+"wCv-uS-4GL.normalTitle" = "Casual";
+
+/* Class = "UIBarButtonItem"; title = "<Back"; ObjectID = "wOu-5O-QJt"; */
+"wOu-5O-QJt.title" = "<Espalda";
+
+/* Class = "UILabel"; text = "New User"; ObjectID = "wSf-Kv-Ohm"; */
+"wSf-Kv-Ohm.text" = "Nuevo usuario";
+
+/* Class = "UIButton"; normalTitle = "<<Prev."; ObjectID = "xt8-2C-eaR"; */
+"xt8-2C-eaR.normalTitle" = "<<Anterior";
+
+/* Class = "UIButton"; normalTitle = "Warm"; ObjectID = "xuQ-mu-Jq4"; */
+"xuQ-mu-Jq4.normalTitle" = "Calentar";

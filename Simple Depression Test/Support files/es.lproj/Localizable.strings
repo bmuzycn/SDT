@@ -1,0 +1,306 @@
+/*
+ Localizable.strings
+ Simple Depression Test
+ 
+ Created by Yu Zhang on 1/1/196.
+ Copyright © 2018 Yu Zhang. All rights reserved.
+ */
+"Over the last 2 weeks, how often have you been bothered by any of the following problems?" = "Durante las últimas 2 semanas, ¿qué tan seguido le han afectado cualquiera de los siguientes problemas?";
+
+"Little interest or pleasure in doing things" = "Poco interés o placer en hacer las cosas";
+
+"Feeling down, depressed, or hopeless" = "Se ha sentido decaído(a), deprimido(a), o sin esperanzas";
+
+"Trouble falling or staying asleep, or sleeping too much" = "Dificultad para dormir o permanecer dormido(a), o ha dormido demasiado";
+
+"Feeling tired or having little energy" = "Se ha sentido cansado(a) o con poca energía";
+
+"Poor appetite or overeating" = "Con poco apetito o ha comido en exceso?";
+
+"Feeling bad about yourself or that you are a failure or have let yourself or your family down" = "Se ha sentido mal con usted mismo(a) – o que es un fracaso o que ha quedado mal con usted mismo(a) o con su familia";
+
+"Trouble concentrating on things, such as reading the newspaper or watching television" = "Ha tenido dificultad para concentrarse en cosas tales como leer el periódico o ver televisión";
+
+"Moving or speaking so slowly that other people could have noticed. Or the opposite being so figety or restless that you have been moving around a lot more than usual" = "¿Se ha estado moviendo o hablando tan lento que otras personas podrían notarlo?, o por el contrario – ha estado tan inquieto(a) o agitado(a), que se ha estado moviendo mucho más de lo normal";
+
+"Thoughts that you would be better off dead, or of hurting yourself" = " Ha pensado que estaría mejor muerto(a) o se le ha ocurrido lastimarse de alguna manera";
+
+"If you checked off any problems, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people?" = "Si usted marcó cualquiera de estos problemas, ¿qué tan difícil fue hacer su trabajo, las tareas del hogar o llevarse bien con otras personas debido a tales problemas?";
+
+"Major Depressive Disorder" = "Trastorno depresivo mayor(depresión clínica)";
+
+"other Depressive Disorder" = "otro trastorno depresivo";
+
+"depressive symptoms but have no effect on your daily life and normal functioning" = "Síntomas depresivos, pero no tienen efecto en su vida diaria y en su funcionamiento normal.";
+
+"no depression" = "sin depresión";
+
+"depressed mood but cannot be confirmed as depressive disorder at this point" = "estado de ánimo deprimido, pero no se puede confirmar como trastorno depresivo en este momento";
+
+"(For initial patient with suicidal or self-injury risk, you need to see a doctor as soon as possible)" = "(Para pacientes iniciales con riesgo de suicidio o autolesión, debe consultar a un médico lo antes posible)";
+
+"no depression" = "sin depresión";
+
+"minimal depression" = "depresión mínima";
+
+"mild depression" = "depresion ligera";
+
+"moderate depression" = "depresión moderada";
+
+"moderately severe depression" = "depresión moderada severa";
+
+"severe depression" = "depresión severa";
+
+"Result" = "Resultado";
+
+"Your score is " = "tu puntaje es ";
+
+"Your prorated score is " = "Tu puntuación prorrateada es ";
+
+"Your probably have " = "Tu probablemente tienes ";
+
+" with severity score of " = " con puntuación de severidad de ";
+
+"as " = "como ";
+
+" as " = " como ";
+
+"Restart" = "Reiniciar";
+
+"Save" = "Salvar";
+
+"Hi \(cUser), Note!" = "\(cUser) ¡Nota!";
+
+"Since the questionnaire relies on patient self-report, all responses should be verified by the clinician, and a definitive diagnosis is made on clinical grounds taking into account how well the patient understood the questionnaire, as well as other relevant information from the patient. Diagnoses of Major Depressive Disorder or Other Depressive Disorder also require impairment of social, occupational, or other important areas of functioning (Question #10) and ruling out normal bereavement, a history of a Manic Episode (Bipolar Disorder), and a physical disorder, medication, or other drug as the biological cause of the depressive symptoms." = "Dado que el cuestionario se basa en el autoinforme del paciente, todas las respuestas deben ser verificadas por el médico y se realiza un diagnóstico definitivo sobre la base clínica teniendo en cuenta qué tan bien el paciente entendió el cuestionario, así como otra información relevante del paciente. Los diagnósticos de trastorno depresivo mayor u otro trastorno depresivo también requieren el deterioro de las áreas sociales, ocupacionales u otras áreas importantes de funcionamiento (Pregunta # 10) y descartar un duelo normal, un historial de un episodio maníaco (trastorno bipolar) y un trastorno físico, Medicación, u otra droga como la causa biológica de los síntomas depresivos.";
+
+"Continue" = "Continuar";
+
+"Not difficult at all" = "Para nada difícil";
+
+"Somewhat difficult" = "Un poco difícil";
+
+"Very difficult" = "Muy difícil";
+
+"Extremely difficult" = "Extremadamente difícil";
+
+"Not at all" = "Para nada";
+
+"Several days" = "Varios días";
+
+"More than half the days" = "Más de la mitad de los días";
+
+"Nearly every day" = "Casi todos los días";
+
+"question: " = "pregunta: ";
+
+"Anhedonia" = "Anhedonia";
+
+"Low Mood" = "Estado de ánimo bajo";
+
+"Insomnia" = "Insomnio";
+
+"Sleep" = "Dormir";
+
+"Fatigue" = "Fatiga";
+
+"Appetite" = "Apetito";
+
+"Worthlessness" = "Inutilidad";
+
+"Concentration" = "Concentración";
+
+"Movement" = "Movimiento";
+
+"Suicide" = "Suicidio";
+
+"Function impairment" = "Daño funcional";
+
+"Interest deficit (anhedonia)" = "Déficit de intereses(anhedonia)";
+
+"Depressed mood" = "Estado de ánimo deprimido";
+
+"Sleep disorder (increased or decreased)" = "Trastorno del sueño (aumentado o disminuido)";
+
+"Energy deficit" = "Déficit energetico";
+
+"Appetite disorder (increased or decreased)" = "Trastorno del apetito (aumentado o disminuido)";
+
+"Guilt (worthlessness, hopelessness, regret)" = "Culpa (inutilidad, desesperanza, arrepentimiento)";
+
+"Concentration deficit" = "Déficit de concentracion";
+
+"Psychomotor retardation or agitation" = "Retraso psicomotor o agitación.";
+
+"Suicidality" = "Suicidio";
+
+"Feeling nervous, anxious or on edge" = "Se ha sentido nervioso(a), ansioso(a)o con los nervios de punta";
+"Not being able to stop or control worrying" = "No ha sido capaz de parar o controlar su preocupación";
+"Worrying too much about different things" = "Se ha preocupado demasiado por motivos diferentes";
+"Trouble relaxing" = "Ha tenido dificultad para relajarse";
+"Being so restless that it is hard to sit still" = "Se ha sentido tan inquieto(a) que no ha podido quedarse quieto(a)";
+"Becoming easily annoyed or irritable" = "Se ha molestado o irritado fácilmente";
+"Feeling afraid as if something awful might happen" = "Ha tenido miedo de que algo terrible fuera a pasar";
+"If you checked off any problems, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people?" = "Si marcó cualquiera de los problemas, ¿qué tanta dificultad le han dado estos problemas para hacer su trabajo, encargarse de las tareas del hogar, o llevarse bien con otras personas?";
+
+"Feeling nervous or anxious" = "nervioso o ansioso";
+"Difficult to control the worry" = "Difícil controlar la preocupación.";
+"Worrying too much about different things" = "Preocuparse demasiado por cosas diferentes.";
+"Feeling nervous" = "Sintiéndose nervioso";
+"Difficult to ctrl..." = "Difícil de controlar ...";
+"Worry too much" = "Preocuparse demasiado";
+"Trouble relaxing" = "Problemas para relajarse";
+"Restlessness" = "Inquietud";
+"Irritability" = "Irritabilidad";
+"Feeling afraid" = "Sintiendo miedo";
+"Function impairment" = "Deterioro de la función";
+
+
+"⭕️" = "✅";
+
+"Delete Data" = "Borrar datos";
+
+"Delete" = "Borrar";
+
+"Warning! Data cannot be recovered after delete." = "¡Advertencia! Los datos no se pueden recuperar después de eliminar.";
+
+"Cancel" = "Cancelar";
+
+"Delete User" = "Borrar usuario";
+
+"Warning! All the records under this user will be deleted." = "¡Advertencia! Todos los registros de este usuario serán eliminados.";
+
+"Hi, " = "Hola, ";
+
+" , Note!" = " ,¡Nota!";
+
+"Note" = "Nota";
+
+"Please input a user name" = "Por favor ingrese un nombre de usuario";
+
+"User exists!" = "¡El usuario existe!";
+
+"New User" = "Nuevo usuario";
+
+"Enter a name" = "Ingresa un nombre";
+
+"default" = "defecto";
+
+" Your Score:" = " Tu puntuación:";
+
+"Depression Severity Reference:" = "Depresión severidad referencia:";
+
+"Severe 21-27\nModerate severe 16-20\nMild moderate 10-15\nMild 5-9\nMinimal or None 0-4" = "Grave 21-27 \nModerada severa 16-20 \n moderada leve 10-15 \n leve 5-9 \n Mínima o ninguna 0-4";
+
+"Warning⚠️" = "¡Advertencia!⚠️";
+
+"Your result will be lost. Still want to quit?" = "Su resultado se perderá. ¿Todavía quieres dejar de fumar?";
+
+"Hi!" = "¡Hola!";
+
+"Your report has been successfully printed to a PDF file.\n\nWhat do you want to do now?" = "Su informe se imprimió con éxito en un archivo PDF. \n\n¿Qué desea hacer ahora?";
+
+"Save pdf" = "Guardar pdf";
+
+"Send by Email" = "Enviar por correo electrónico";
+
+"Nothing" = "Nada";
+
+"minimal" = "mínimo";
+
+"mild" = "templado";
+
+"moderate" = "moderar";
+
+"moderate severe" = "severo moderado";
+
+"severe" = "grave";
+
+"Simplified Chinese" = "Chino simplificado";
+
+"Traditional Chinese" = "Chino tradicional";
+
+"English" = "Inglés";
+
+"Settings" = "Ajustes";
+
+"Preferred Language" = "Idioma preferido";
+
+"Display Setting" = "Configuración de pantalla";
+
+"Theme Customize" = "Personalizar tema";
+
+"More Information" = "Más información";
+
+"About this version" = "Acerca de esta version";
+
+"'s Records" = " Registros";
+
+"Your Score:" = "Tu puntuación:";
+
+"Switch language to" = "Cambiar idioma a";
+
+"Do you want to continue?" = "¿Quieres continuar?";
+
+"Spanish" = "Español";
+
+"About Simple Depression Test" = "Acerca de la prueba de depresión simple";
+
+"A 9-item Depression Scale" = "Una escala de depresión de 9 elementos";
+
+"A 7-item Anxiety Scale" = "Una escala de ansiedad de 7 elementos";
+
+"Other Screeners" = "Otros screeners";
+
+"Switch to" = "Cambiar a";
+
+"GAD-7 is a sensitive self-administrated test to assess generalized anxiety disorder(GAD), normally used in outpatient and primary care settings for referral to psychiatrist pending outcome. However, it cannot be used as replacement for clinical assessment and additional evaluation should be used to confirm a diagnosis of GAD." = "GAD-7 es una prueba sensible autoadministrada para evaluar el trastorno de ansiedad generalizada (GAD, por sus siglas en inglés), que normalmente se usa en entornos ambulatorios y de atención primaria para la derivación a un psiquiatra en espera del resultado. Sin embargo, no se puede usar como reemplazo para la evaluación clínica y se debe usar una evaluación adicional para confirmar un diagnóstico de GAD.";
+
+"no anxiety" = "sin ansiedad";
+
+"mild anxiety" = "ansiedad leve";
+
+"moderate anxiety" = "ansiedad moderada";
+
+"severe anxiety" = "ansiedad severa";
+
+"You may experience " = "Usted puede experimentar ";
+
+"Your probably have anxiety disorder" = "Tu probablemente tienes trastorno de ansiedad";
+
+" with severity score of " = "con puntuación de severidad de";
+
+"To determine the presence and type of anxiety disorder, further assessment by a mental health professional is recommended." = "Para determinar la presencia y el tipo de trastorno de ansiedad, se recomienda una evaluación adicional por parte de un profesional de salud mental.";
+
+" as " = " como ";
+
+"(The result indicates your suicide risk increased. Regardless of your total score, you should see a doctor as soon as possible)" = "(El resultado indica que su riesgo de suicidio ha aumentado. Independientemente de su puntaje total, debe consultar a un médico tan pronto como sea posible)";
+
+"(For newly detection of suicide or self-injury risk, you need to see a doctor as soon as possible)" = "(Para la detección reciente con riesgo de suicidio o autolesión, debe consultar a un médico lo antes posible)";
+
+"A full clinical assessment is recommended." = "Se recomienda una evaluación clínica completa.";
+
+"(according to DSM-5)" = "(según DSM-5)";
+
+"Enter a username" = "Introduzca un nombre de usuario";
+
+"You have " = "Tienes ";
+
+" unanswered questions which cause failed to calculate the total score. Please review and complete all of the items." = "preguntas sin respuesta que causan no calcular la puntuación total. Por favor revise y complete todos los artículos.";
+
+" unanswered questions. " = " preguntas sin respuesta.";
+
+"Your prorated score is " = "Tu puntuación prorrateada es ";
+
+"None to minimal" = "Ninguno al mínimo";
+
+"Mild" = "Templado";
+
+"Moderate" = "Moderar";
+
+"Moderately severe" = "Moderadamente grave";
+
+"Severe" = "Grave";
+
+"Your total score is " = "Tu puntuación total es";
+
+"Switch language to" = "Cambiar idioma a";

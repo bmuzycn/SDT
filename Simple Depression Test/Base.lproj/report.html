@@ -1,0 +1,599 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=unicode">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<!--<meta name="viewport" content="width=device-width, initial-scale=0.8">-->
+    
+<title>PHQ9</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:SimSun;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"\@SimSun";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-link:"Header Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-link:"Footer Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+p.msonormal0, li.msonormal0, div.msonormal0
+	{mso-style-name:msonormal;
+	margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+span.HeaderChar
+	{mso-style-name:"Header Char";
+	mso-style-link:Header;
+	font-family:"Times New Roman",serif;}
+span.FooterChar
+	{mso-style-name:"Footer Char";
+	mso-style-link:Footer;
+	font-family:"Times New Roman",serif;}
+.MsoChpDefault
+	{font-size:10.0pt;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+</style>
+<script type="text/javascript">
+var selectedRow = 0;
+var selectedCol = 0;
+    function calculate(obj){
+        var sum=0;
+        for (var i=0; i<10; i++) {
+            for (var j=0; j<4; j++) {
+                if (obj.id == "myCheck"+i+j) {
+                    selectedRow = i;
+                    selectedCol = j;
+                }
+            }
+        }
+        for (var j=0; j<4; j++) {
+            if (j!=selectedCol) {
+            document.getElementById("myCheck"+selectedRow+j).checked = false;
+        }
+        }
+        for (var i=0;i<9;i++){
+            for(var j=0; j<4; j++){
+                sum += document.getElementById("myCheck"+i+j).checked?j:0;
+            }
+        }
+        document.getElementById('total').value = sum;
+    }
+</script>
+</head>
+
+<body lang=EN-US>
+
+<div class=WordSection1>
+
+<p class=MsoNormal align=center style='text-align:center'>PATIENT HEALTH QUESTIONNAIRE-9 (PHQ-9) </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b>Full Name: <INPUT TYPE="text" style="font-size:14pt" id=name>
+Date: <input type=date style=font-size:14pt id=date></b></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse'>
+ <tr>
+  <td width=1048 valign=top style='width:786.15pt;border:solid #BFBFBF 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b>Over the last 2 weeks, how often have you been bothered
+  by any of the following problems?</b></p>
+  <p class=MsoNormal><b>&nbsp;</b></p>
+  </td>
+  <td width=16 valign=top style='width:12.1pt;border:solid #BFBFBF 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b>Not at all</b></p>
+  </td>
+  <td width=79 valign=top style='width:59.35pt;border:solid #BFBFBF 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b>Several days</b></p>
+  </td>
+  <td width=66 valign=top style='width:49.45pt;border:solid #BFBFBF 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b>More than half the days</b></p>
+  </td>
+  <td width=79 valign=top style='width:59.15pt;border:solid #BFBFBF 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b>Nearly every day</b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=1048 valign=top style='width:786.15pt;border:solid #BFBFBF 1.0pt;
+  border-top:none;background:#F2F2F2;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoListParagraph style='margin-top:5.0pt;margin-right:0in;
+  margin-bottom:0in;margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in'><b>1.</b><b><span
+  style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Little interest or
+  pleasure in doing things?</b></p>
+  </td>
+  <td width=16 valign=top style='width:12.1pt;border-top:none;border-left:none;
+  border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+  background:#F2F2F2;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck00 value="0" onclick="calculate(this)"></p>
+  </td>
+  <td width=79 valign=top style='width:59.35pt;border-top:none;border-left:
+  none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+  background:#F2F2F2;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck01 value="1" onclick="calculate(this)"></p>
+  </td>
+  <td width=66 valign=top style='width:49.45pt;border-top:none;border-left:
+  none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+  background:#F2F2F2;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck02 value="2" onclick="calculate(this)"></p>
+  </td>
+  <td width=79 valign=top style='width:59.15pt;border-top:none;border-left:
+  none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+  background:#F2F2F2;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck03 value="3" onclick="calculate(this)"></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=1048 valign=top style='width:786.15pt;border:solid #BFBFBF 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoListParagraph style='margin-top:5.0pt;margin-right:0in;
+  margin-bottom:0in;margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in'><b>2.</b><b><span
+  style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Feeling down,
+  depressed, or hopeless?</b></p>
+  </td>
+  <td width=16 valign=top style='width:12.1pt;border-top:none;border-left:none;
+  border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck10 value="0" onclick="calculate(this)"></p>
+  </td>
+  <td width=79 valign=top style='width:59.35pt;border-top:none;border-left:
+  none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck11 value="1" onclick="calculate(this)"></p>
+  </td>
+  <td width=66 valign=top style='width:49.45pt;border-top:none;border-left:
+  none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck12 value="2" onclick="calculate(this)"></p>
+  </td>
+  <td width=79 valign=top style='width:59.15pt;border-top:none;border-left:
+  none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck13 value="3" onclick="calculate(this)"></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=1048 valign=top style='width:786.15pt;border:solid #BFBFBF 1.0pt;
+  border-top:none;background:#F2F2F2;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoListParagraph style='margin-top:5.0pt;margin-right:0in;
+  margin-bottom:0in;margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in'><b>3.</b><b><span
+  style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Trouble falling or
+  staying asleep, or sleeping too much?</b></p>
+  </td>
+  <td width=16 valign=top style='width:12.1pt;border-top:none;border-left:none;
+  border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+  background:#F2F2F2;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck20 value="0" onclick="calculate(this)"></p>
+  </td>
+  <td width=79 valign=top style='width:59.35pt;border-top:none;border-left:
+  none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+  background:#F2F2F2;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck21 value="1" onclick="calculate(this)"></p>
+  </td>
+  <td width=66 valign=top style='width:49.45pt;border-top:none;border-left:
+  none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+  background:#F2F2F2;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck22 value="2" onclick="calculate(this)"></p>
+  </td>
+  <td width=79 valign=top style='width:59.15pt;border-top:none;border-left:
+  none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+  background:#F2F2F2;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck23 value="3" onclick="calculate(this)"></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=1048 valign=top style='width:786.15pt;border:solid #BFBFBF 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoListParagraph style='margin-top:5.0pt;margin-right:0in;
+  margin-bottom:0in;margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in'><b>4.</b><b><span
+  style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Feeling tired or
+  having little energy? </b></p>
+  </td>
+  <td width=16 valign=top style='width:12.1pt;border-top:none;border-left:none;
+  border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck30 value="0" onclick="calculate(this)"></p>
+  </td>
+  <td width=79 valign=top style='width:59.35pt;border-top:none;border-left:
+  none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck31 value="1" onclick="calculate(this)"></p>
+  </td>
+  <td width=66 valign=top style='width:49.45pt;border-top:none;border-left:
+  none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck32 value="2" onclick="calculate(this)"></p>
+  </td>
+  <td width=79 valign=top style='width:59.15pt;border-top:none;border-left:
+  none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck33 value="3" onclick="calculate(this)"></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=1048 valign=top style='width:786.15pt;border:solid #BFBFBF 1.0pt;
+  border-top:none;background:#F2F2F2;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoListParagraph style='margin-top:5.0pt;margin-right:0in;
+  margin-bottom:0in;margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in'><b>5.</b><b><span
+  style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Poor appetite or overeating?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </b></p>
+  </td>
+  <td width=16 valign=top style='width:12.1pt;border-top:none;border-left:none;
+  border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+  background:#F2F2F2;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck40 value="0" onclick="calculate(this)"></p>
+  </td>
+  <td width=79 valign=top style='width:59.35pt;border-top:none;border-left:
+  none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+  background:#F2F2F2;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck41 value="1" onclick="calculate(this)"></p>
+  </td>
+  <td width=66 valign=top style='width:49.45pt;border-top:none;border-left:
+  none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+  background:#F2F2F2;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck42 value="2" onclick="calculate(this)"></p>
+  </td>
+  <td width=79 valign=top style='width:59.15pt;border-top:none;border-left:
+  none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+  background:#F2F2F2;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck43 value="3" onclick="calculate(this)"></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=1048 valign=top style='width:786.15pt;border:solid #BFBFBF 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoListParagraph style='margin-top:5.0pt;margin-right:0in;
+  margin-bottom:0in;margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in'><b>6.</b><b><span
+  style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Feeling bad about
+  yourself - or that you are a failure or have let yourself or your family
+  down?</b></p>
+  </td>
+  <td width=16 valign=top style='width:12.1pt;border-top:none;border-left:none;
+  border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck50 value="0" onclick="calculate(this)"></p>
+  </td>
+  <td width=79 valign=top style='width:59.35pt;border-top:none;border-left:
+  none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck51 value="1" onclick="calculate(this)"></p>
+  </td>
+  <td width=66 valign=top style='width:49.45pt;border-top:none;border-left:
+  none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck52 value="2" onclick="calculate(this)"></p>
+  </td>
+  <td width=79 valign=top style='width:59.15pt;border-top:none;border-left:
+  none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck53 value="3" onclick="calculate(this)"></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=1048 valign=top style='width:786.15pt;border:solid #BFBFBF 1.0pt;
+  border-top:none;background:#F2F2F2;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoListParagraph style='margin-top:5.0pt;margin-right:0in;
+  margin-bottom:0in;margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in'><b>7.</b><b><span
+  style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Trouble concentrating
+  on things, such as reading the newspaper or watching
+  television?&nbsp;&nbsp;&nbsp;&nbsp; </b></p>
+  </td>
+  <td width=16 valign=top style='width:12.1pt;border-top:none;border-left:none;
+  border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+  background:#F2F2F2;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck60 value="0" onclick="calculate(this)"></p>
+  </td>
+  <td width=79 valign=top style='width:59.35pt;border-top:none;border-left:
+  none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+  background:#F2F2F2;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck61 value="1" onclick="calculate(this)"></p>
+  </td>
+  <td width=66 valign=top style='width:49.45pt;border-top:none;border-left:
+  none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+  background:#F2F2F2;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck62 value="2" onclick="calculate(this)"></p>
+  </td>
+  <td width=79 valign=top style='width:59.15pt;border-top:none;border-left:
+  none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+  background:#F2F2F2;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck63 value="3" onclick="calculate(this)"></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=1048 valign=top style='width:786.15pt;border:solid #BFBFBF 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoListParagraph style='margin-top:5.0pt;margin-right:0in;
+  margin-bottom:0in;margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in'><b>8.</b><b><span
+  style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Moving or speaking so
+  slowly that other people could havenoticed? Or the opposite — being so
+  fidgety or restless that you have been moving around a lot more than usual</b></p>
+  </td>
+  <td width=16 valign=top style='width:12.1pt;border-top:none;border-left:none;
+  border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck70 value="0" onclick="calculate(this)"></p>
+  </td>
+  <td width=79 valign=top style='width:59.35pt;border-top:none;border-left:
+  none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck71 value="1" onclick="calculate(this)"></p>
+  </td>
+  <td width=66 valign=top style='width:49.45pt;border-top:none;border-left:
+  none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck72 value="2" onclick="calculate(this)"></p>
+  </td>
+  <td width=79 valign=top style='width:59.15pt;border-top:none;border-left:
+  none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck73 value="3" onclick="calculate(this)"></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=1048 valign=top style='width:786.15pt;border:solid #BFBFBF 1.0pt;
+  border-top:none;background:#F2F2F2;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoListParagraph style='margin-top:5.0pt;margin-right:0in;
+  margin-bottom:0in;margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in'><b>9.</b><b><span
+  style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Thoughts that you
+  would be better off dead, or of hurting yourself in some way?</b></p>
+  </td>
+  <td width=16 valign=top style='width:12.1pt;border-top:none;border-left:none;
+  border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+  background:#F2F2F2;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck80 value="0" onclick="calculate(this)"></p>
+  </td>
+  <td width=79 valign=top style='width:59.35pt;border-top:none;border-left:
+  none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+  background:#F2F2F2;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck81 value="1" onclick="calculate(this)"></p>
+  </td>
+  <td width=66 valign=top style='width:49.45pt;border-top:none;border-left:
+  none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+  background:#F2F2F2;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck82 value="2" onclick="calculate(this)"></p>
+  </td>
+  <td width=79 valign=top style='width:59.15pt;border-top:none;border-left:
+  none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+  background:#F2F2F2;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck83 value="3" onclick="calculate(this)"></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=1288 colspan=5 valign=top style='width:966.2pt;border:solid #BFBFBF 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b>&nbsp;</b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=1048 valign=top style='width:786.15pt;border:solid #BFBFBF 1.0pt;
+  border-top:none;background:#F2F2F2;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b>If you checked off any problems, how difficult have
+  these problems made it for you to do your work, take care of things at home,
+  or get along with other people?</b></p>
+  </td>
+  <td width=16 valign=top style='width:12.1pt;border-top:none;border-left:none;
+  border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+  background:#F2F2F2;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b>Not difficult at all</b></p>
+  </td>
+  <td width=79 valign=top style='width:59.35pt;border-top:none;border-left:
+  none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+  background:#F2F2F2;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b>Somewhat difficult</b></p>
+  </td>
+  <td width=66 valign=top style='width:49.45pt;border-top:none;border-left:
+  none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+  background:#F2F2F2;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b>Very difficult</b></p>
+  </td>
+  <td width=79 valign=top style='width:59.15pt;border-top:none;border-left:
+  none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+  background:#F2F2F2;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b>Extremely difficult</b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=1048 valign=top style='width:786.15pt;border:solid #BFBFBF 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoListParagraph style='margin-bottom:0in;margin-bottom:.0001pt'><b>&nbsp;</b></p>
+  </td>
+  <td width=16 valign=top style='width:12.1pt;border-top:none;border-left:none;
+  border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck90 value="0" onclick="calculate(this)"></p>
+  </td>
+  <td width=79 valign=top style='width:59.35pt;border-top:none;border-left:
+  none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck91 value="0" onclick="calculate(this)"></p>
+  </td>
+  <td width=66 valign=top style='width:49.45pt;border-top:none;border-left:
+  none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck92 value="0" onclick="calculate(this)"></p>
+  </td>
+  <td width=79 valign=top style='width:59.15pt;border-top:none;border-left:
+  none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><INPUT TYPE="checkbox" id=myCheck93 value="0" onclick="calculate(this)"></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal>Your total score:<span lang=en style='font-family:SimSun'>　</span>
+<input type=number style="font-size:14pt" id=total size=2 min=0 max=27>
+
+/27</p>
+
+<p class=MsoNormal>Result: <INPUT TYPE=text id=result style="width:100%"></p>
+
+<p></p>
+<p class=MsoNormal>*PHQ-9 using slightly different diagnostic criteria from DSM-4 or DSM-5 which specified all symptoms except significant weight change (5%) and item 8 (any degree of suicide thought will be count) persist nearly every day in the past two weeks.<a href="http://www.psychologysalon.com/2014/11/the-phq-9-tool-for-overdiagnosis-of.html">(Randy Paterson, 2014).</a></p>
+
+<p></p>
+
+<p class=MsoNormal>PHQ-9 score ≥ 10 had a sensitivity of 88% and a
+specificity of 88% for major depression. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1495268/">(Kroenke et al, 2001).</a></p>
+<p></p>
+
+<p class=MsoNormal>Suicide hotlines provide help to those in need. <a href="https://faq.whatsapp.com/en/ios/28030010/">Global Suicide Hotline Resources</a></p>
+
+<p class=MsoListParagraph>Acknowledgement: PHQ-9 was developed by Drs. Robert L. Spitzer, Janet
+B.W. Williams, Kurt Kroenke and colleagues, with an educational grant from
+Pfizer Inc. No permission required to reproduce, translate, display or
+distribute.</p>
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=582
+ style='width:436.5pt;background:#F0F0F0;border-collapse:collapse'>
+ <tr>
+  <td width=87 style='width:65.25pt;border:none;border-bottom:solid silver 1.0pt;
+  padding:2.25pt 7.5pt 0in 7.5pt'>
+  <p class=MsoNormal style='margin-top:12.75pt;margin-right:0in;margin-bottom:
+  12.75pt;margin-left:0in'><b><span style='font-size:11.5pt;font-family:"Calibri",sans-serif;
+  color:#595959'>Score</span></b></p>
+  </td>
+  <td style='border:none;border-bottom:solid silver 1.0pt;padding:2.25pt 7.5pt 0in 7.5pt'>
+  <p class=MsoNormal style='margin-top:12.75pt;margin-right:0in;margin-bottom:
+  12.75pt;margin-left:0in'><b><span style='font-size:11.5pt;font-family:"Calibri",sans-serif;
+  color:#595959'>Depression severity</span></b></p>
+  </td>
+  <td style='border:none;border-bottom:solid silver 1.0pt;padding:2.25pt 7.5pt 0in 7.5pt'>
+  <p class=MsoNormal style='margin-top:12.75pt;margin-right:0in;margin-bottom:
+  12.75pt;margin-left:0in'><b><span style='font-size:11.5pt;font-family:"Calibri",sans-serif;
+  color:#595959'>Comments</span></b></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='border:none;border-bottom:solid #D7D7D7 1.0pt;padding:2.25pt 7.5pt 0in 7.5pt'>
+  <p class=MsoNormal style='margin-top:12.75pt;margin-right:0in;margin-bottom:
+  12.75pt;margin-left:0in'><span style='font-size:11.0pt;font-family:"Calibri",sans-serif;
+  color:#595959'>0-4</span></p>
+  </td>
+  <td style='border:none;border-bottom:solid #D7D7D7 1.0pt;padding:2.25pt 7.5pt 0in 7.5pt'>
+  <p class=MsoNormal style='margin-top:12.75pt;margin-right:0in;margin-bottom:
+  12.75pt;margin-left:0in'><span style='font-size:11.0pt;font-family:"Calibri",sans-serif;
+  color:#595959'>Minimal or none</span></p>
+  </td>
+  <td style='border:none;border-bottom:solid #D7D7D7 1.0pt;padding:2.25pt 7.5pt 0in 7.5pt'>
+  <p class=MsoNormal style='margin-top:12.75pt;margin-right:0in;margin-bottom:
+  12.75pt;margin-left:0in'><span style='font-size:11.0pt;font-family:"Calibri",sans-serif;
+  color:#595959'>Monitor; may not require treatment</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='border:none;border-bottom:solid #D7D7D7 1.0pt;padding:2.25pt 7.5pt 0in 7.5pt'>
+  <p class=MsoNormal style='margin-top:12.75pt;margin-right:0in;margin-bottom:
+  12.75pt;margin-left:0in'><span style='font-size:11.0pt;font-family:"Calibri",sans-serif;
+  color:#595959'>5-9</span></p>
+  </td>
+  <td style='border:none;border-bottom:solid #D7D7D7 1.0pt;padding:2.25pt 7.5pt 0in 7.5pt'>
+  <p class=MsoNormal style='margin-top:12.75pt;margin-right:0in;margin-bottom:
+  12.75pt;margin-left:0in'><span style='font-size:11.0pt;font-family:"Calibri",sans-serif;
+  color:#595959'>Mild</span></p>
+  </td>
+  <td rowspan=2 style='border:none;border-bottom:solid #D7D7D7 1.0pt;
+  padding:2.25pt 7.5pt 0in 7.5pt'>
+  <p class=MsoNormal style='margin-top:12.75pt;margin-right:0in;margin-bottom:
+  12.75pt;margin-left:0in'><span style='font-size:11.0pt;font-family:"Calibri",sans-serif;
+  color:#595959'>Use clinical judgment (symptom duration, functional
+  impairment) to determine necessity of treatment</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='border:none;border-bottom:solid #D7D7D7 1.0pt;padding:2.25pt 7.5pt 0in 7.5pt'>
+  <p class=MsoNormal style='margin-top:12.75pt;margin-right:0in;margin-bottom:
+  12.75pt;margin-left:0in'><span style='font-size:11.0pt;font-family:"Calibri",sans-serif;
+  color:#595959'>10-14</span></p>
+  </td>
+  <td style='border:none;border-bottom:solid #D7D7D7 1.0pt;padding:2.25pt 7.5pt 0in 7.5pt'>
+  <p class=MsoNormal style='margin-top:12.75pt;margin-right:0in;margin-bottom:
+  12.75pt;margin-left:0in'><span style='font-size:11.0pt;font-family:"Calibri",sans-serif;
+  color:#595959'>Moderate</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='border:none;border-bottom:solid #D7D7D7 1.0pt;padding:2.25pt 7.5pt 0in 7.5pt'>
+  <p class=MsoNormal style='margin-top:12.75pt;margin-right:0in;margin-bottom:
+  12.75pt;margin-left:0in'><span style='font-size:11.0pt;font-family:"Calibri",sans-serif;
+  color:#595959'>15-19</span></p>
+  </td>
+  <td style='border:none;border-bottom:solid #D7D7D7 1.0pt;padding:2.25pt 7.5pt 0in 7.5pt'>
+  <p class=MsoNormal style='margin-top:12.75pt;margin-right:0in;margin-bottom:
+  12.75pt;margin-left:0in'><span style='font-size:11.0pt;font-family:"Calibri",sans-serif;
+  color:#595959'>Moderately severe</span></p>
+  </td>
+  <td rowspan=2 style='border:none;border-bottom:solid #D7D7D7 1.0pt;
+  padding:2.25pt 7.5pt 0in 7.5pt'>
+  <p class=MsoNormal style='margin-top:12.75pt;margin-right:0in;margin-bottom:
+  12.75pt;margin-left:0in'><span style='font-size:11.0pt;font-family:"Calibri",sans-serif;
+  color:#595959'>Warrants active treatment with psychotherapy, medications, or
+  combination</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='border:none;border-bottom:solid #D7D7D7 1.0pt;padding:2.25pt 7.5pt 0in 7.5pt'>
+  <p class=MsoNormal style='margin-top:12.75pt;margin-right:0in;margin-bottom:
+  12.75pt;margin-left:0in'><span style='font-size:11.0pt;font-family:"Calibri",sans-serif;
+  color:#595959'>20-27</span></p>
+  </td>
+  <td style='border:none;border-bottom:solid #D7D7D7 1.0pt;padding:2.25pt 7.5pt 0in 7.5pt'>
+  <p class=MsoNormal style='margin-top:12.75pt;margin-right:0in;margin-bottom:
+  12.75pt;margin-left:0in'><span style='font-size:11.0pt;font-family:"Calibri",sans-serif;
+  color:#595959'>Severe</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><img src=image001.png style="height:40%"></p>
+<p class=MsoNormal><img src=image002.png style="height:40%"></p>
+    <p></p>
+    <p class=MsoNormal>Disclaimer: This report is for test only and should
+    not be used for the diagnosis or treatment of medical conditions without consulting your doctor. Simple Depression Test DOES NOT garrantee the accuracy of the result. </p>
+</div>
+
+</body>
+
+</html>
