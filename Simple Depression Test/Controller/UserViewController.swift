@@ -322,6 +322,8 @@ class UserViewController: UIViewController, UITextFieldDelegate{
         users.removeAll()
         let managedContext = AppDelegate.viewContext
         let fetchRequest: NSFetchRequest = User.fetchRequest()
+        let sortbyName = NSSortDescriptor(key: "userID", ascending: true)
+        fetchRequest.sortDescriptors = [sortbyName]
         do {
             let fetchedResults = try managedContext.fetch(fetchRequest)
             print(fetchedResults.count)

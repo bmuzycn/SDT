@@ -6,6 +6,7 @@
         <attribute name="scores" optional="YES" attributeType="Transformable" customClassName="[Int]" syncable="YES"/>
         <attribute name="totalScore" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" customClassName="Any" syncable="YES"/>
         <attribute name="userName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uuid" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="dataGad7" inverseEntity="User" syncable="YES"/>
     </entity>
     <entity name="PHQ9" representedClassName=".PHQ9" syncable="YES" codeGenerationType="category">
@@ -14,6 +15,7 @@
         <attribute name="scores" optional="YES" attributeType="Transformable" customClassName="[Int]" syncable="YES"/>
         <attribute name="totalScore" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" customClassName="Any" syncable="YES"/>
         <attribute name="userName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uuid" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="data" inverseEntity="User" syncable="YES"/>
     </entity>
     <entity name="User" representedClassName=".User" syncable="YES" codeGenerationType="category">
@@ -27,8 +29,8 @@
         <memberEntity name="User"/>
     </configuration>
     <elements>
-        <element name="GAD7" positionX="-189" positionY="63" width="128" height="135"/>
-        <element name="PHQ9" positionX="-335" positionY="9" width="128" height="135"/>
+        <element name="GAD7" positionX="-189" positionY="63" width="128" height="150"/>
+        <element name="PHQ9" positionX="-335" positionY="9" width="128" height="150"/>
         <element name="User" positionX="-36" positionY="36" width="128" height="90"/>
     </elements>
 </model>

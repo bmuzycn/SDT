@@ -14,6 +14,7 @@ struct PersonalData: Hashable {
     var scores: [Int]?
     var totalScore: Int?
     var result: String?
+    var uuid: String?
 }
 
 

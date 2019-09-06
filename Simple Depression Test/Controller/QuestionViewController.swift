@@ -407,18 +407,19 @@ class QuestionViewController: UIViewController, DataDelegate {
     
     fileprivate func saveData() {
         let date = Date()
-        let newData = PersonalData(userName: cUser, dateTime: date, scores: scores, totalScore: totalScore, result: result)
+        let uuid = UUID().uuidString
+        let newData = PersonalData(userName: cUser, dateTime: date, scores: scores, totalScore: totalScore, result: result, uuid: uuid)
         UserDefaults.standard.set(true, forKey: cUser+Settings.questionSet)
         switch Settings.questionSet {
         case "phq9":
-            PHQ9.saveData(totalScore, scores, result, cUser, date)
+            PHQ9.saveData(totalScore, scores, result, cUser, date, uuid)
             if CloudHelper.onCloud {
                 CloudHelper.saveData(data: newData, type: "PHQ9") { (success) in
                     print("save success")
                 }
             }
         case "gad7":
-            GAD7.saveData(totalScore, scores, result, cUser, date)
+            GAD7.saveData(totalScore, scores, result, cUser, date, uuid)
             if CloudHelper.onCloud {
                 CloudHelper.saveData(data: newData, type: "GAD7") { (success) in
                     print("save success")

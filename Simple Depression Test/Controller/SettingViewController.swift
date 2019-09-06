@@ -29,7 +29,7 @@ class SettingViewController: MirroringViewController, UITableViewDelegate, UITab
         button.isUserInteractionEnabled = true
         button.isOn = false
         button.addTarget(self, action: #selector(switchOnCloud), for: .valueChanged)
-        button.tintColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+        button.tintColor = #colorLiteral(red: 0, green: 0.5898008943, blue: 1, alpha: 1)
         button.onTintColor = #colorLiteral(red: 0, green: 0.5898008943, blue: 1, alpha: 1)
         return button
     }()
@@ -161,14 +161,11 @@ class SettingViewController: MirroringViewController, UITableViewDelegate, UITab
         switch indexPath.section {
         case 0:
             cell.textLabel?.text = languages[indexPath.row]
-            cell.textLabel?.textAlignment = .left
             cell.accessoryType = (indexPath.row == rowSelected) ? .checkmark : .none
         case 1:
             cell.detailTextLabel?.isEnabled = true
             cell.textLabel?.text = screeners[indexPath.row]
-            cell.textLabel?.textAlignment = .left
             cell.detailTextLabel?.text = subTitleForScreeners[indexPath.row]
-            cell.detailTextLabel?.textAlignment = .left
             cell.accessoryType = (indexPath.row == rowSelectedForScreener) ? .checkmark : .none
         case 2:
             cell.accessoryType = .disclosureIndicator
@@ -189,17 +186,7 @@ class SettingViewController: MirroringViewController, UITableViewDelegate, UITab
         }
         return cell
     }
-    
-//    func createAccessoryView() -> UIView {
-//        let containerView = UIStackView()
-//        containerView.addSubview(spinner)
-//        containerView.addSubview(switchButton)
-//        containerView.axis = .horizontal
-//        containerView.translatesAutoresizingMaskIntoConstraints = false
-//        containerView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V: |-[v]-|", metrics: nil, views: ["v" : containerView]) +  NSLayoutConstraint.constraints(withVisualFormat: "H: |-[v]-|", metrics: nil, views: ["v" : containerView]))
-//        return containerView
-//    }
-    
+
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 44
     }
@@ -212,28 +199,29 @@ class SettingViewController: MirroringViewController, UITableViewDelegate, UITab
             rowSelected = indexPath.row
             //refresh the cell content by reloadData
             tableView.reloadData()
-            let alert = UIAlertController(title: "Switch language to".localized + " \(languages[indexPath.row])", message: "Do you want to continue?".localized, preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { (UIAlertAction) in
+            let alert = UIAlertController(title: "Switch language to".localized + " \(languages[indexPath.row])", message: nil, preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { [unowned self](UIAlertAction) in
                 self.switchLang()
             }))
             alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil))
             present(alert, animated: true, completion: nil)
         case 1:
             rowSelectedForScreener = indexPath.row
-            let alert = UIAlertController(title: "Switch to".localized + " \(screeners[indexPath.row])", message: "Do you want to continue?".localized, preferredStyle: UIAlertController.Style.actionSheet)
-            alert.addAction(UIAlertAction(title: "Ok".localized, style: UIAlertAction.Style.default, handler: { (UIAlertAction) in
+            let alert = UIAlertController(title: "Switch to".localized + " \(screeners[indexPath.row])", message: nil, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok".localized, style: UIAlertAction.Style.default, handler: { [unowned self](UIAlertAction) in
                 self.switchScreener()
             }))
             alert.addAction(UIAlertAction(title: "Cancel".localized, style: UIAlertAction.Style.default, handler: nil))
-            alert.popoverPresentationController?.sourceView = view
-            alert.popoverPresentationController?.sourceRect = (tableView.cellForRow(at: indexPath)?.frame)!
+            if UIDevice.current.model.contains(find: "iPad") {
+                alert.popoverPresentationController?.sourceView = self.view
+                let popRect = tableView.cellForRow(at: indexPath)!.frame
+                alert.popoverPresentationController?.sourceRect = popRect
+            }
             present(alert, animated: true, completion: nil)
         case 2:
             performSegue(withIdentifier: "toSettingVC", sender: self)
         case 3:
-//            if indexPath.row == 1 {
-//                alert()
-//            }
+
             tableView.cellForRow(at: indexPath)?.selectionStyle = .none
 
         default:
@@ -250,18 +238,35 @@ class SettingViewController: MirroringViewController, UITableViewDelegate, UITab
             CloudHelper.syncData(dataType: "PHQ9") { (finish) in
                 if finish == false {
                     DispatchQueue.main.async {
+                        self.spinner.stopAnimating()
+
                         let alert = CloudHelper.showAlert(message: "iCloud connection failed. Please check your device status")
                         self.switchButton.setOn(false, animated: true)
                         self.present(alert, animated: true, completion: nil)
                     }
 
+                }else{
+                    DispatchQueue.main.async {
+                        print("PHQ9 sync finished")
+                        self.spinner.stopAnimating()
+                    }
                 }
             }
             CloudHelper.syncData(dataType: "GAD7") { (finish) in
+                if finish == false {
+                DispatchQueue.main.async {
+                    self.spinner.stopAnimating()
+
+                    let alert = CloudHelper.showAlert(message: "iCloud connection failed. Please check your device status")
+                    self.switchButton.setOn(false, animated: true)
+                    self.present(alert, animated: true, completion: nil)
+                }
                 
+            }else{
                 DispatchQueue.main.async {
                     print("GAD7 sync finished")
-                    self.spinner.stopAnimating()
+//                    self.spinner.stopAnimating()
+                }
                 }
             }
             
@@ -269,6 +274,7 @@ class SettingViewController: MirroringViewController, UITableViewDelegate, UITab
         }else {
             // offline
             CloudHelper.onCloud = false
+            self.spinner.stopAnimating()
             UserDefaults.standard.set(false, forKey: "onCloud")
         }
     }

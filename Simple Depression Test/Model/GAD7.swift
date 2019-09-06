@@ -19,48 +19,64 @@ class GAD7: NSManagedObject {
     static var count = Int()
     static let context = AppDelegate.viewContext
 
-    class func saveData(_ totalScore: Int?, _ scores: [Int]?,_ result: String?,_ user: String?, _ date: Date?){
-        let request:NSFetchRequest = User.fetchRequest()
-        request.predicate = NSPredicate(format: "userID == %@", user ?? "")
-        var existUser: User?
-        
-        do {
-            let result = try context.fetch(request)
-            for item in result {
-                if item.userID == user {
-                    existUser = item
-                    break
+    class func saveData(_ totalScore: Int?, _ scores: [Int]?,_ result: String?,_ user: String?, _ date: Date?, _ uuid: String?){
+        //check exist data
+        let fetchRequest:NSFetchRequest = GAD7.fetchRequest()
+        if let uid = uuid {
+            fetchRequest.predicate = NSPredicate(format: "uuid == %@", uid)
+            do {
+                let fetchresult = try context.fetch(fetchRequest)
+                if fetchresult.count > 0 {
+                    print("Save failed due to record exists")
+                } else {
+                    //save data
+                    let request:NSFetchRequest = User.fetchRequest()
+                    request.predicate = NSPredicate(format: "userID == %@", user ?? "")
+                    var existUser: User?
+                    
+                    do {
+                        let result = try context.fetch(request)
+                        for item in result {
+                            if item.userID == user {
+                                existUser = item
+                                break
+                            }
+                        }
+                    }catch {
+                        print(error)
+                    }
+                    
+                    let newData = GAD7(context: context)
+                    newData.totalScore = Int16(totalScore ?? 0)
+                    newData.scores = scores
+                    newData.result = result
+                    newData.userName = user
+                    newData.dateTime = date
+                    newData.uuid = uuid
+                    if existUser == nil {
+                        existUser = User(context: context)
+                        existUser?.userID = user //assign existUser a new userID
+                    }
+                    existUser?.addToDataGad7(newData)
+                    
+                    do {
+                        try context.save()
+                        print("save successively")
+                    }catch {
+                        print(error)
+                    }
                 }
-            }
-        }catch {
-            print(error)
-        }
-
-        let newData = GAD7(context: context)
-        newData.totalScore = Int16(totalScore ?? 0)
-        newData.scores = scores
-        newData.result = result
-        newData.userName = user
-        newData.dateTime = date
-        if existUser == nil {
-            existUser = User(context: context)
-            existUser?.userID = user //assign existUser a new userID
-        }
-        existUser?.addToDataGad7(newData)
-
-        do {
-            try context.save()
-            print("save successively")
-        }catch {
-            print(error)
+            }catch {
+                   print(error)
+                }
         }
     }
-    
     //return last fetchLimit records
     class func fetchData(_ user: String,_ n: Int ) {
         clearData()
         let request = NSFetchRequest<GAD7>(entityName: "GAD7")
         request.predicate = NSPredicate(format: "userName = %@", user)
+        request.sortDescriptors = [NSSortDescriptor(key: "dateTime", ascending: true)]
         var startNum = 0
         var endNum = 0
         do {
@@ -109,6 +125,47 @@ class GAD7: NSManagedObject {
         }
     }
     
+    class func saveData(data: [PersonalData], complete: (Bool)->Void) {
+
+        for personalData in data {
+            let request:NSFetchRequest = User.fetchRequest()
+            request.predicate = NSPredicate(format: "userID == %@", personalData.userName ?? "")
+            var existUser: User?
+            do {
+                let fetchresult = try context.fetch(request)
+                if fetchresult.count > 0 {
+                    existUser = fetchresult.first
+                }
+                
+            }catch {
+                print(error)
+                complete(false)
+            }
+            let newData = GAD7(context: context)
+            newData.totalScore = Int16(personalData.totalScore ?? 0)
+            newData.scores = personalData.scores
+            newData.result = personalData.result
+            newData.userName = personalData.userName
+            newData.dateTime = personalData.dateTime
+            newData.uuid = personalData.uuid
+            if existUser == nil {
+                existUser = User(context: context)
+                existUser?.userID = personalData.userName //assign existUser a new userID
+            }
+            existUser?.addToDataGad7(newData)
+        }
+        do {
+            try context.save()
+        } catch {
+            print(error)
+            complete(false)
+        }
+        context.reset()
+        complete(true)
+
+    }
+    
+    
     class func deleteData(_ user: String, _ n: Int, _ x: Int) {
         let request = NSFetchRequest<GAD7>(entityName: "GAD7")
         request.predicate = NSPredicate(format: "userName = %@", user)
@@ -134,14 +191,21 @@ class GAD7: NSManagedObject {
     class func fetchAll() -> Any? {
         var results = [PersonalData]()
         let request = NSFetchRequest<GAD7>(entityName: "GAD7")
+        let sortbyName = NSSortDescriptor(key: "userName", ascending: true)
+        let sortbyTime = NSSortDescriptor(key: "dateTime", ascending: true)
+        request.sortDescriptors = [sortbyName, sortbyTime]
         do {
             let data = try context.fetch(request)
             if data.count > 0 {
                 for item in data {
-                    let personalData = PersonalData(userName: item.userName, dateTime: item.dateTime, scores: item.scores, totalScore: Int(item.totalScore), result: item.result)
+                    if item.uuid == nil {
+                        item.uuid = UUID().uuidString
+                    }
+                    let personalData = PersonalData(userName: item.userName, dateTime: item.dateTime, scores: item.scores, totalScore: Int(item.totalScore), result: item.result, uuid: item.uuid)
                     results.append(personalData)
                 }
             }
+            try context.save()
             
         } catch {
             print(error)
