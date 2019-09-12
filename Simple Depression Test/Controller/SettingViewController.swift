@@ -197,11 +197,12 @@ class SettingViewController: MirroringViewController, UITableViewDelegate, UITab
         switch indexPath.section {
         case 0:
             rowSelected = indexPath.row
-            //refresh the cell content by reloadData
-            tableView.reloadData()
+
             let alert = UIAlertController(title: "Switch language to".localized + " \(languages[indexPath.row])", message: nil, preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { [unowned self](UIAlertAction) in
                 self.switchLang()
+                //refresh the cell content by reloadData
+                tableView.reloadData()
             }))
             alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil))
             present(alert, animated: true, completion: nil)
@@ -230,25 +231,47 @@ class SettingViewController: MirroringViewController, UITableViewDelegate, UITab
     }
     // MARK: - Switch on iCloud
     @objc func switchOnCloud() {
+        var isSyncPHQ9Finish = false
+        var isSyncGAD7Finish = false
+        let zoneCreatedKey = "zoneCreatedKey"
         if switchButton.isOn == true {
+            if !UserDefaults.standard.bool(forKey: zoneCreatedKey){
+                //Create a new zone
+                CloudHelper.createZone { [unowned self](err) in
+                    if let error = err{
+                        let alert = CloudHelper.showAlert(message: "Error: \(error.localizedDescription)")
+                        self.present(alert,animated: true)
+                    } else {
+                        UserDefaults.standard.set(true, forKey: zoneCreatedKey)
+                    }
+                }
+                UIApplication.shared.registerForRemoteNotifications()
+            }
+
             spinner.isHidden = false
             spinner.startAnimating()
-            CloudHelper.onCloud = true
-            UserDefaults.standard.set(true, forKey: "onCloud")
             CloudHelper.syncData(dataType: "PHQ9") { (finish) in
                 if finish == false {
                     DispatchQueue.main.async {
                         self.spinner.stopAnimating()
 
-                        let alert = CloudHelper.showAlert(message: "iCloud connection failed. Please check your device status")
+                        let alert = CloudHelper.showAlert(message: CloudHelper.errorMessage)
                         self.switchButton.setOn(false, animated: true)
                         self.present(alert, animated: true, completion: nil)
                     }
-
-                }else{
+                    // if sync successful
+                }else {
                     DispatchQueue.main.async {
                         print("PHQ9 sync finished")
-                        self.spinner.stopAnimating()
+                        isSyncPHQ9Finish = true
+                        CloudHelper.saveSubscription(type: "PHQ9")
+
+                        if isSyncGAD7Finish {
+                            self.spinner.stopAnimating()
+                            UserDefaults.standard.set(true, forKey: "onCloud")
+                            CloudHelper.onCloud = true
+
+                        }
                     }
                 }
             }
@@ -257,15 +280,23 @@ class SettingViewController: MirroringViewController, UITableViewDelegate, UITab
                 DispatchQueue.main.async {
                     self.spinner.stopAnimating()
 
-                    let alert = CloudHelper.showAlert(message: "iCloud connection failed. Please check your device status")
+                    let alert = CloudHelper.showAlert(message: CloudHelper.errorMessage)
                     self.switchButton.setOn(false, animated: true)
                     self.present(alert, animated: true, completion: nil)
                 }
-                
-            }else{
+                    // if sync successful
+            }else {
                 DispatchQueue.main.async {
                     print("GAD7 sync finished")
-//                    self.spinner.stopAnimating()
+                    isSyncGAD7Finish = true
+                    CloudHelper.saveSubscription(type: "GAD7")
+
+                    if isSyncPHQ9Finish {
+                        self.spinner.stopAnimating()
+                        UserDefaults.standard.set(true, forKey: "onCloud")
+                        CloudHelper.onCloud = true
+
+                    }
                 }
                 }
             }

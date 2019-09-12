@@ -31,6 +31,9 @@ class QuestionViewController: UIViewController, DataDelegate {
     var lastScores: [Int]?
     var lastTotal: Int?
     var numberOfUnanswered = 0
+    lazy var onCloud: Bool = {
+        UserDefaults.standard.bool(forKey: "onCloud")
+    }()
     let titleText = "Over the last 2 weeks, how often have you been bothered by any of the following problems?".localized
     let buttonTitles = ["Not at all".localized, "Several days".localized, "More than half the days".localized, "Nearly every day".localized]
     let buttonTitlesForLast = ["Not difficult at all".localized, "Somewhat difficult".localized, "Very difficult".localized, "Extremely difficult".localized]
@@ -361,6 +364,7 @@ class QuestionViewController: UIViewController, DataDelegate {
             if numberOfUnanswered == 0 {
             alert.addAction(UIAlertAction(title: "Restart".localized, style: .default, handler: { (UIAlertAction) in self.startOver()}))
             alert.addAction(UIAlertAction(title: "Save".localized, style: .default, handler: { (UIAlertAction) in
+                self.saveData()
                 self.goResultView()}))
             }else {
                 alert.addAction(UIAlertAction(title: "Ok".localized, style: .default, handler: nil))
@@ -413,17 +417,23 @@ class QuestionViewController: UIViewController, DataDelegate {
         switch Settings.questionSet {
         case "phq9":
             PHQ9.saveData(totalScore, scores, result, cUser, date, uuid)
-            if CloudHelper.onCloud {
-                CloudHelper.saveData(data: newData, type: "PHQ9") { (success) in
-                    print("save success")
+            if self.onCloud {
+                DispatchQueue.global().async {
+                    CloudHelper.saveData(data: newData, type: "PHQ9") { (success) in
+                        print("save PHQ9 success")
+                }
+
                 }
             }
         case "gad7":
             GAD7.saveData(totalScore, scores, result, cUser, date, uuid)
-            if CloudHelper.onCloud {
-                CloudHelper.saveData(data: newData, type: "GAD7") { (success) in
-                    print("save success")
+            if self.onCloud {
+                DispatchQueue.global().async {
+                    CloudHelper.saveData(data: newData, type: "GAD7") { (success) in
+                        print("save GAD7 success")
+                    }
                 }
+
             }
         default: break
         }
@@ -436,7 +446,6 @@ class QuestionViewController: UIViewController, DataDelegate {
             let vc = segue.destination as? ResultViewController
             dataDelegate = vc
             dataDelegate?.passResult(user: cUser)
-            saveData()
         }
     }
     func goResultView() {

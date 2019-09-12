@@ -57,7 +57,7 @@ class GAD7: NSManagedObject {
                         existUser = User(context: context)
                         existUser?.userID = user //assign existUser a new userID
                     }
-                    existUser?.addToDataGad7(newData)
+                    newData.user = existUser
                     
                     do {
                         try context.save()
@@ -83,18 +83,18 @@ class GAD7: NSManagedObject {
             let data = try context.fetch(request)
             self.count = data.count
             if self.count != 0 {
-                if data.count - PHQ9.fetchLimit*n == 0 {
+                if data.count - Settings.fetchLimit*n == 0 {
                     startNum = 0
-                    endNum = PHQ9.fetchLimit - 1
+                    endNum = Settings.fetchLimit - 1
                     flag = false
                 }
-                else if (data.count - PHQ9.fetchLimit*n) > 0 && (data.count - PHQ9.fetchLimit*n) <= PHQ9.fetchLimit  {
+                else if (data.count - Settings.fetchLimit*n) > 0 && (data.count - Settings.fetchLimit*n) <= Settings.fetchLimit  {
                     startNum = 0
-                    endNum = data.count - PHQ9.fetchLimit*n - 1
+                    endNum = data.count - Settings.fetchLimit*n - 1
                     flag = false
-                }else if (data.count - PHQ9.fetchLimit*n) > PHQ9.fetchLimit {
-                    startNum = data.count - PHQ9.fetchLimit*(n+1)
-                    endNum = data.count - PHQ9.fetchLimit*n - 1
+                }else if (data.count - Settings.fetchLimit*n) > Settings.fetchLimit {
+                    startNum = data.count - Settings.fetchLimit*(n+1)
+                    endNum = data.count - Settings.fetchLimit*n - 1
                     flag = true
                 }
                 else {
@@ -128,6 +128,19 @@ class GAD7: NSManagedObject {
     class func saveData(data: [PersonalData], complete: (Bool)->Void) {
 
         for personalData in data {
+            //check if data exists
+            let requestForData:NSFetchRequest = GAD7.fetchRequest()
+            guard let uuid = personalData.uuid else {return}
+            requestForData.predicate = NSPredicate(format: "uuid == %@", uuid)
+            do {
+                let result = try context.fetch(requestForData)
+                if result.count > 0 {
+                    continue
+                }
+            }catch {
+                print(error)
+            }
+            //check if user already exists
             let request:NSFetchRequest = User.fetchRequest()
             request.predicate = NSPredicate(format: "userID == %@", personalData.userName ?? "")
             var existUser: User?
@@ -152,7 +165,7 @@ class GAD7: NSManagedObject {
                 existUser = User(context: context)
                 existUser?.userID = personalData.userName //assign existUser a new userID
             }
-            existUser?.addToDataGad7(newData)
+            newData.user = existUser
         }
         do {
             try context.save()
@@ -165,6 +178,26 @@ class GAD7: NSManagedObject {
 
     }
     
+    class func deleteData(data: [PersonalData]) {
+        var uuids = [String]()
+        for data in data {
+            uuids.append(data.uuid ?? "")
+        }
+        let request = NSFetchRequest<GAD7>(entityName: "GAD7")
+        request.predicate = NSPredicate(format: "ANY uuid IN %@", uuids)
+        do {
+            let results = try context.fetch(request)
+            
+            for data in results {
+                context.delete(data)
+                
+            }
+            try context.save()
+            
+        } catch {
+            print("Could not delete.\(error)")
+        }
+    }
     
     class func deleteData(_ user: String, _ n: Int, _ x: Int) {
         let request = NSFetchRequest<GAD7>(entityName: "GAD7")
@@ -173,18 +206,18 @@ class GAD7: NSManagedObject {
             let data = try context.fetch(request)
             if data.count == 0 {
                 self.count = 0
-            } else if data.count - PHQ9.fetchLimit*n < PHQ9.fetchLimit {
+            } else if data.count - Settings.fetchLimit*n < Settings.fetchLimit {
                 print("data\(x) will be deleted")
                 context.delete(data[x])
             }else {
-                print("data\(data.count-PHQ9.fetchLimit*(n+1)+x) will be deleted")
+                print("data\(data.count-Settings.fetchLimit*(n+1)+x) will be deleted")
                 
-                context.delete(data[data.count-PHQ9.fetchLimit*(n+1)+x])
+                context.delete(data[data.count-Settings.fetchLimit*(n+1)+x])
             }
             try context.save()
             
         } catch {
-            fatalError("Could not delete.\(error)")
+            print("Could not delete.\(error)")
         }
     }
     
@@ -204,13 +237,13 @@ class GAD7: NSManagedObject {
                     let personalData = PersonalData(userName: item.userName, dateTime: item.dateTime, scores: item.scores, totalScore: Int(item.totalScore), result: item.result, uuid: item.uuid)
                     results.append(personalData)
                 }
+                try context.save()
             }
-            try context.save()
             
         } catch {
             print(error)
         }
-        
+        context.reset()
         return results
         
     }

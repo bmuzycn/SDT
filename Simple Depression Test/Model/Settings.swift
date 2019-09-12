@@ -22,6 +22,8 @@ class Settings {
     static var bgImage = UIImage(named: "bgImage")
     static var questionSet = "phq9"
     static var reportFilename = "report"
+    static var fetchLimit = 15
+
     
     static func setColor(_ value: Int) -> UIColor{
         switch Settings.questionSet {

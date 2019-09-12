@@ -21,7 +21,7 @@ struct Expandabe {
 
 class MenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
 
-    let fetchLimit = PHQ9.fetchLimit
+    let fetchLimit = Settings.fetchLimit
     var interactor:Interactor? = nil
     var menuActionDelegate:MenuActionDelegate? = nil
     var scoresArray = [[Int]]()
@@ -262,6 +262,33 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         resultSearchArray = resultArray
     }
     //delete data
+    fileprivate func deleteOnCloud(_ data: [AnyObject], _ x: Int, _ dataType: String) {
+        var deleteData = data[x]
+
+        switch dataType {
+        case "PHQ9":
+            deleteData = deleteData as! PHQ9
+        case "GAD7":
+            deleteData = deleteData as! GAD7
+        default:
+            break
+        }
+        let userName = deleteData.value(forKey: "userName") as? String
+        let dateTime = deleteData.value(forKey: "dateTime") as? Date
+        let scores = deleteData.value(forKey: "scores") as? [Int]
+        let totalScore = deleteData.value(forKey: "totalScore") as? Int
+        let result = deleteData.value(forKey: "result") as? String
+        let uuid = deleteData.value(forKey: "uuid") as? String
+        let personalData = PersonalData(userName: userName, dateTime: dateTime, scores: scores, totalScore: totalScore, result: result, uuid: uuid)
+        
+        CloudHelper.deleteRecord(data: personalData, type: dataType) { (success) in
+            if !success {
+                let alert = CloudHelper.showAlert(message: "Delete failed on iCloud")
+                self.present(alert, animated: true)
+            }
+        }
+    }
+    
     func deleteData(_ user: String, _ x: Int) {
         let context = AppDelegate.viewContext
         switch Settings.questionSet {
@@ -272,6 +299,10 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
                 let data = try context.fetch(request)
                 print("data\(x) will be deleted")
                 context.delete(data[x])
+                if UserDefaults.standard.bool(forKey: "onCloud") {
+                    deleteOnCloud(data, x, "PHQ9")
+
+                }
                 try context.save()
                 
             } catch {
@@ -284,6 +315,10 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
                 let data = try context.fetch(request)
                 print("data\(x) will be deleted")
                 context.delete(data[x])
+                if UserDefaults.standard.bool(forKey: "onCloud") {
+                    deleteOnCloud(data, x, "GAD7")
+
+                }
                 try context.save()
                 
             } catch {

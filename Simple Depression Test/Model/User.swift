@@ -41,7 +41,7 @@ class User: NSManagedObject {
             }
             try context.save()
         }catch {
-            fatalError("Could not delete.\(error)")
+            print("Could not delete.\(error)")
         }
     }
 }

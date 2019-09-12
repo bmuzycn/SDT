@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14492.1" systemVersion="18G87" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14492.1" systemVersion="18G95" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="GAD7" representedClassName=".GAD7" syncable="YES" codeGenerationType="category">
         <attribute name="dateTime" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="result" optional="YES" attributeType="String" syncable="YES"/>
@@ -23,11 +23,6 @@
         <relationship name="data" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PHQ9" inverseName="user" inverseEntity="PHQ9" syncable="YES"/>
         <relationship name="dataGad7" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="GAD7" inverseName="user" inverseEntity="GAD7" syncable="YES"/>
     </entity>
-    <configuration name="Cloud">
-        <memberEntity name="PHQ9"/>
-        <memberEntity name="GAD7"/>
-        <memberEntity name="User"/>
-    </configuration>
     <elements>
         <element name="GAD7" positionX="-189" positionY="63" width="128" height="150"/>
         <element name="PHQ9" positionX="-335" positionY="9" width="128" height="150"/>

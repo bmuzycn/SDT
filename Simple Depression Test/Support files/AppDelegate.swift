@@ -9,6 +9,8 @@
 import UIKit
 import CoreData
 import Firebase
+import CloudKit
+//import NotificationCenter
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,9 +19,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        // Register with APNs
+        application.registerForRemoteNotifications()
         buildKeyWindow()
         Localizer.DoTheMagic()
-        FirebaseApp.configure()
+//        FirebaseApp.configure()
         return true
     }
 
@@ -40,12 +45,40 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             window?.rootViewController = firstViewController
         }
     }
-    
-    func loadedNotification(notification: NSNotification) {
-        
+
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        print("Successfully registered for notifications!")
     }
-    private func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
-        
+
+
+    func application(_ application: UIApplication,
+                     didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        // The token is not currently available.
+        print("Remote notification support is unavailable due to error: \(error.localizedDescription)")
+    }
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) {
+        print("Push notification received: \(userInfo)")
+        guard let ckNotification = CKNotification(fromRemoteNotificationDictionary: userInfo) else {return}
+        if ((ckNotification.subscriptionID?.contains(find: CloudHelper.subscriptionID)) ?? false )  {
+            let reason = (ckNotification as! CKQueryNotification).queryNotificationReason
+            CloudHelper.handleNotification(reason: reason, notification: ckNotification as! CKQueryNotification)
+
+    }
+    
+//    private func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+//        print("Push notification received: \(userInfo)")
+//
+////        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "recordsDidChangeRemotely"), object: nil, userInfo: userInfo)
+//        guard let ckNotification = CKNotification(fromRemoteNotificationDictionary: userInfo) else {return}
+//        if (ckNotification.subscriptionID! == CloudHelper.subscriptionID)  {
+//            let reason = (ckNotification as! CKQueryNotification).queryNotificationReason
+//            CloudHelper.handleNotification(reason: reason, notification: ckNotification as! CKQueryNotification)
+//            completionHandler(.newData)
+//        } else {
+//            completionHandler(.noData)
+//        }
+//
     }
     
     func applicationWillResignActive(_ application: UIApplication) {
@@ -95,7 +128,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                  * The store could not be migrated to the current model version.
                  Check the error message to determine what the actual problem was.
                  */
-                fatalError("Unresolved error \(error), \(error.userInfo)")
+                print("Unresolved error \(error), \(error.userInfo)")
+                self.window?.rootViewController?.present(CloudHelper.showAlert(message: "Unresolved error: \(error.userInfo)"), animated: true)
             }
         })
         return container
@@ -121,7 +155,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 // Replace this implementation with code to handle the error appropriately.
                 // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
                 let nserror = error as NSError
-                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+                print("Unresolved error \(nserror), \(nserror.userInfo)")
+                self.window?.rootViewController?.present(CloudHelper.showAlert(message: "Unresolved error:\(nserror.userInfo)"), animated: true)
             }
         }
     }

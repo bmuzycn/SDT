@@ -176,7 +176,7 @@ class ResultViewController: UIViewController, DataDelegate, ChartViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         stepper.isHidden = true
-        pageNum.text = Int(PHQ9.fetchLimit).description
+        pageNum.text = Int(Settings.fetchLimit).description
         //Mark:add swipe gestures
         let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(self.handleGesture(gesture:)))
         swipeLeft.direction = .left
@@ -321,7 +321,7 @@ class ResultViewController: UIViewController, DataDelegate, ChartViewDelegate {
     @IBOutlet weak var pageNum: UILabel!
     @IBAction func numberControl(_ sender: UIStepper) {
         pageNum.text = Int(sender.value).description
-        PHQ9.fetchLimit = Int(sender.value)
+        Settings.fetchLimit = Int(sender.value)
         dataSetting()
     }
     

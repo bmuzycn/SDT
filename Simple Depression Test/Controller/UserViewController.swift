@@ -41,6 +41,7 @@ class UserViewController: UIViewController, UITextFieldDelegate{
         self.view.addGestureRecognizer(swipeRight)
         
         userID.clearButtonMode = .whileEditing
+        
     }
     
     fileprivate func setBackGroundImage() {
