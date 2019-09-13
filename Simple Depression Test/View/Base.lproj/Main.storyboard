@@ -855,6 +855,7 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 </variation>
                                 <connections>
+                                    <action selector="buttonPressDown:" destination="BYZ-38-t0r" eventType="touchDown" id="bVC-eZ-jUU"/>
                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aNl-dT-pwC"/>
                                 </connections>
                             </button>
@@ -882,6 +883,7 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 </variation>
                                 <connections>
+                                    <action selector="buttonPressDown:" destination="BYZ-38-t0r" eventType="touchDown" id="pcE-Ue-hGB"/>
                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eRZ-Gc-I5P"/>
                                 </connections>
                             </button>
@@ -912,6 +914,7 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 </variation>
                                 <connections>
+                                    <action selector="buttonPressDown:" destination="BYZ-38-t0r" eventType="touchDown" id="5NF-HW-Ksv"/>
                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hCt-y3-BG7"/>
                                 </connections>
                             </button>
@@ -939,6 +942,7 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 </variation>
                                 <connections>
+                                    <action selector="buttonPressDown:" destination="BYZ-38-t0r" eventType="touchDown" id="RH1-Vw-ZK7"/>
                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rYZ-4R-BbJ"/>
                                 </connections>
                             </button>
@@ -1140,7 +1144,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Eeb-FI-1vA" userLabel="lrbuttons">
-                                <rect key="frame" x="137.5" y="534" width="100" height="30"/>
+                                <rect key="frame" x="137.5" y="583" width="100" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YDb-nC-QJz" userLabel="last25">
                                         <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -1159,7 +1163,7 @@
                                 </subviews>
                             </stackView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dqv-ER-SeV">
-                                <rect key="frame" x="110" y="572" width="155" height="29"/>
+                                <rect key="frame" x="110" y="621" width="155" height="29"/>
                                 <viewLayoutGuide key="safeArea" id="A8U-GM-uv7"/>
                                 <segments>
                                     <segment title="Bar Chart"/>
@@ -1170,7 +1174,7 @@
                                 </connections>
                             </segmentedControl>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="lhm-C0-J0i" userLabel="numControl">
-                                <rect key="frame" x="261" y="544" width="94" height="67.5"/>
+                                <rect key="frame" x="261" y="593" width="94" height="67.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B0k-Mf-aYY">
                                         <rect key="frame" x="0.0" y="0.0" width="94" height="24"/>
@@ -1198,13 +1202,13 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="MAI-9o-0gf" userLabel="ContainerView">
-                                <rect key="frame" x="18" y="114" width="339" height="424"/>
+                                <rect key="frame" x="18" y="114" width="339" height="473"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" horizontalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="gZU-jx-e74" userLabel="RadarView" customClass="RadarChartView" customModule="Charts">
-                                        <rect key="frame" x="0.0" y="0.0" width="339" height="211.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="339" height="236"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="NjO-uW-faP">
-                                                <rect key="frame" x="106" y="181.5" width="127" height="30"/>
+                                                <rect key="frame" x="106" y="206" width="127" height="30"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xt8-2C-eaR">
                                                         <rect key="frame" x="0.0" y="0.0" width="53.5" height="30"/>
@@ -1231,14 +1235,14 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dbk-nn-cbE">
-                                        <rect key="frame" x="0.0" y="212.5" width="339" height="211.5"/>
+                                        <rect key="frame" x="0.0" y="237" width="339" height="236"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uw2-Ub-OyQ" userLabel="LineView" customClass="LineChartView" customModule="Charts">
-                                                <rect key="frame" x="0.0" y="0.0" width="339" height="211.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="339" height="236"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                             <view contentMode="scaleToFill" horizontalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="uAJ-kf-tPh" userLabel="BarChartView" customClass="BarChartView" customModule="Charts">
-                                                <rect key="frame" x="0.0" y="0.0" width="339" height="211.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="339" height="236"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                         </subviews>
@@ -1521,7 +1525,7 @@
         <image name="settings" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="OMp-gp-HFA"/>
+        <segue reference="G2c-V5-ikA"/>
         <segue reference="bCE-9s-EjP"/>
         <segue reference="Jtx-RO-ZxW"/>
     </inferredMetricsTieBreakers>

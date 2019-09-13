@@ -118,8 +118,7 @@ class QuestionViewController: UIViewController, DataDelegate {
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-//            NotificationCenter.default.removeObserver(self)
-            cUser = ""
+        cUser = ""
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -169,21 +168,32 @@ class QuestionViewController: UIViewController, DataDelegate {
             next()
         }
     }
-
+    // press down button will trigger the animation
+    @IBAction func buttonPressDown(_ sender: UIButton) {
+        sender.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+        sender.setTitle(sender.currentTitle!+"⭕️".localized, for: .normal)
+    }
     @IBAction func buttonPressed(_ sender: UIButton) {
         print("\(questionNum): \(sender.tag)")
+        for button in self.buttons {
+            button.isUserInteractionEnabled = false
+        }
         self.isButtonPressed[questionNum] = true
         self.scores[questionNum] = sender.tag
         UIView.performWithoutAnimation {
-//            sender.setTitle(sender.currentTitle!+"⭕️".localized, for: .normal)
             changeTitle()
             sender.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
         }
         UIView.animate(withDuration: 0.2, delay: 0.1, options: .allowAnimatedContent, animations: {
             sender.transform = CGAffineTransform.identity
+
             self.view.layoutIfNeeded()
         }) { finished in
-                self.next()
+            self.next()
+            for button in self.buttons {
+                button.isUserInteractionEnabled = true
+                }
+            
             }
     }
     
@@ -482,7 +492,7 @@ class QuestionViewController: UIViewController, DataDelegate {
             }
             //mark the button that already pressed
             if isButtonPressed[questionNum] {
-                buttons[buttonNum].setTitle(buttonTitlesForLast[buttonNum] + "⭕️".localized, for: UIControl.State.normal)
+                buttons[buttonNum].setTitle(buttonTitlesForLast[buttonNum] + "✅".localized, for: UIControl.State.normal)
             }
             var strProblems = ""
             for n in 0...allquestions.count - 2 {
@@ -500,7 +510,7 @@ class QuestionViewController: UIViewController, DataDelegate {
             }
             //mark the button that already pressed
             if isButtonPressed[questionNum] {
-                buttons[buttonNum].setTitle(buttonTitles[buttonNum] + "⭕️".localized, for: UIControl.State.normal)
+                buttons[buttonNum].setTitle(buttonTitles[buttonNum] + "✅".localized, for: UIControl.State.normal)
             }
         }
 

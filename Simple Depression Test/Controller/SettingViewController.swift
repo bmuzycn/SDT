@@ -261,10 +261,11 @@ class SettingViewController: MirroringViewController, UITableViewDelegate, UITab
                     }
                     // if sync successful
                 }else {
+                    CloudHelper.saveSubscription(type: "PHQ9")
+
                     DispatchQueue.main.async {
                         print("PHQ9 sync finished")
                         isSyncPHQ9Finish = true
-                        CloudHelper.saveSubscription(type: "PHQ9")
 
                         if isSyncGAD7Finish {
                             self.spinner.stopAnimating()
@@ -286,16 +287,17 @@ class SettingViewController: MirroringViewController, UITableViewDelegate, UITab
                 }
                     // if sync successful
             }else {
-                DispatchQueue.main.async {
-                    print("GAD7 sync finished")
-                    isSyncGAD7Finish = true
                     CloudHelper.saveSubscription(type: "GAD7")
 
-                    if isSyncPHQ9Finish {
-                        self.spinner.stopAnimating()
-                        UserDefaults.standard.set(true, forKey: "onCloud")
-                        CloudHelper.onCloud = true
-
+                    DispatchQueue.main.async {
+                        print("GAD7 sync finished")
+                        isSyncGAD7Finish = true
+                        
+                        if isSyncPHQ9Finish {
+                            self.spinner.stopAnimating()
+                            UserDefaults.standard.set(true, forKey: "onCloud")
+                            CloudHelper.onCloud = true
+                            
                     }
                 }
                 }

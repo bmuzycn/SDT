@@ -42,6 +42,14 @@ class UserViewController: UIViewController, UITextFieldDelegate{
         
         userID.clearButtonMode = .whileEditing
         
+        NotificationCenter.default.addObserver(self, selector: #selector(newUserReceived(_:)), name: NSNotification.Name("newUsers"), object: nil)
+    }
+    
+    @objc func newUserReceived(_ notification: Notification) {
+        let newUsers = notification.userInfo?["newUsers"] as! [String]
+        usersArray = usersArray + newUsers
+        usersView.reloadComponent(0)
+        
     }
     
     fileprivate func setBackGroundImage() {
@@ -421,12 +429,7 @@ extension UserViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return usersArray.count
     }
-    
-//    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-//        currentUser = usersArray[row]
-//
-//        return usersArray[row]
-//    }
+
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         currentUser = usersArray[row]

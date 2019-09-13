@@ -152,7 +152,6 @@ class ReportVC: UIViewController, WKNavigationDelegate, MFMailComposeViewControl
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-//        NotificationCenter.default.removeObserver(self)
         FileManager.default.clearTmpDirectory()
         clearArrays()
         removeCache()

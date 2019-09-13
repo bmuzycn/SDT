@@ -54,6 +54,7 @@ class PHQ9: NSManagedObject {
                     if existUser == nil {
                         existUser = User(context: context)
                         existUser?.userID = user //assign existUser a new userID
+
                     }
                     newData.user = existUser
                     do {
@@ -71,6 +72,7 @@ class PHQ9: NSManagedObject {
     }
     
     class func saveData(data: [PersonalData], complete: (Bool)->Void) {
+        var newUsers = [String]()
         for personalData in data {
             //check if data exists
             let requestForData:NSFetchRequest = PHQ9.fetchRequest()
@@ -107,6 +109,7 @@ class PHQ9: NSManagedObject {
             if existUser == nil {
                 existUser = User(context: context)
                 existUser?.userID = personalData.userName //assign existUser a new userID
+                newUsers.append(personalData.userName ?? "")
             }
             newData.user = existUser
         }
@@ -116,6 +119,12 @@ class PHQ9: NSManagedObject {
             print(error)
         }
         context.reset()
+        
+        if !newUsers.isEmpty {
+
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "newUsers"), object: nil, userInfo: ["newUsers": newUsers])
+        }
+        
         complete(true)
     }
     
