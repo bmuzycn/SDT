@@ -234,8 +234,8 @@ class ResultViewController: UIViewController, DataDelegate, ChartViewDelegate {
     
     
     //Mark: save to csv file
-    @IBAction func saveCsv(_ sender: Any) {
-        saveCsv()
+    @IBAction func saveCsv(_ sender: UIButton) {
+        saveToCsv(sender.tag)
     }
 
     //Mark: buttons for radarchart
@@ -640,26 +640,60 @@ extension ResultViewController : MenuActionDelegate {
 }
 
 extension ResultViewController {
-    func  saveCsv() {
+    func  saveToCsv(_ tag: Int) {
         let dateSave = Date()
         let formatter = DateFormatter()
         formatter.timeZone = TimeZone.current
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         let dateString = formatter.string(from: dateSave)
         var str = ""
-        print(totalScores.count)
         
+
+        var dataSet = [PersonalData]()
+
+        let semaphore = DispatchSemaphore(value: 0)
+
+        switch Settings.questionSet {
+        case "phq9":
+            if tag == 1 {
+                dataSet = PHQ9.fetchAll() as! [PersonalData]
+            }else{
+                dataSet = PHQ9.fetchAll(currentUser) as! [PersonalData]
+            }
+            semaphore.signal()
+        case "gad7":
+            if tag == 1 {
+                dataSet = GAD7.fetchAll() as! [PersonalData]
+            }else {
+                dataSet = GAD7.fetchAll(currentUser) as! [PersonalData]
+            }
+            semaphore.signal()
+        default:
+            semaphore.signal()
+            break
+        }
+//        semaphore.wait()
+        let timeoutResult = semaphore.wait(timeout: .distantFuture)
+        print(timeoutResult)
         //load data to string
-        for i in 0..<totalScores.count {
-            let date = dateArray[i]
+        guard !dataSet.isEmpty else {return}
+        for i in 0..<dataSet.count {
+            guard let dateTime = dataSet[i].dateTime else {return}
+            guard let userToSave = dataSet[i].userName else {return}
+            guard let scoreArray = dataSet[i].scores else {return}
+            guard let totalScore = dataSet[i].totalScore else {return}
+            guard let resultToSave = dataSet[i].result else {return}
+
+            let date = formatter.string(from: dateTime)
             
-            str.append("name: \(currentUser),date:\(date)\n")
+            str.append("name: \(userToSave),date:\(date)\n")
             var n = 0
-            for score in scoreArray[i] {
+            for score in scoreArray {
                 str.append("question\(n+1),\(score)\n")
                 n = n + 1
             }
-            str.append("total,\(totalScores[i])\n\n")
+            str.append("total,\(totalScore)\n")
+            str.append("result,\(resultToSave)\n\n")
         }
         
         let fileName = "\(dateString).csv"

@@ -226,11 +226,15 @@ class PHQ9: NSManagedObject {
         }
     }
     
-    class func fetchAll() -> Any? {
+    class func fetchAll(_ userName: String? = nil) -> Any? {
         var results = [PersonalData]()
         let request = NSFetchRequest<PHQ9>(entityName: "PHQ9")
         let sortbyName = NSSortDescriptor(key: "userName", ascending: true)
         let sortbyTime = NSSortDescriptor(key: "dateTime", ascending: true)
+        if let userName = userName {
+            request.predicate = NSPredicate(format: "userName == %@", userName)
+            
+        }
         request.sortDescriptors = [sortbyName, sortbyTime]
         do {
             let data = try context.fetch(request)

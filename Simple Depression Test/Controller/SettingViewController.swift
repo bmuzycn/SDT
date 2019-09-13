@@ -298,8 +298,8 @@ class SettingViewController: MirroringViewController, UITableViewDelegate, UITab
                             UserDefaults.standard.set(true, forKey: "onCloud")
                             CloudHelper.onCloud = true
                             
+                        }
                     }
-                }
                 }
             }
             

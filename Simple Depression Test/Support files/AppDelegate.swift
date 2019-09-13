@@ -8,9 +8,8 @@
 
 import UIKit
 import CoreData
-import Firebase
+//import Firebase
 import CloudKit
-//import NotificationCenter
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

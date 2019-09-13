@@ -221,12 +221,17 @@ class GAD7: NSManagedObject {
         }
     }
     
-    class func fetchAll() -> Any? {
+    class func fetchAll(_ userName: String? = nil) -> Any? {
         var results = [PersonalData]()
         let request = NSFetchRequest<GAD7>(entityName: "GAD7")
         let sortbyName = NSSortDescriptor(key: "userName", ascending: true)
         let sortbyTime = NSSortDescriptor(key: "dateTime", ascending: true)
         request.sortDescriptors = [sortbyName, sortbyTime]
+        
+        if let userName = userName {
+            request.predicate = NSPredicate(format: "userName == %@", userName)
+            
+        }
         do {
             let data = try context.fetch(request)
             if data.count > 0 {
